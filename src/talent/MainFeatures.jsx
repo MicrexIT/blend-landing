@@ -1,7 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Image from "gatsby-image";
-import BackgroundImage from "gatsby-background-image-es5";
 
 import { Dot } from "../components/Dot";
 import { Button } from "../components/Button";

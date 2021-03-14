@@ -7,21 +7,18 @@ const showcase = {
   titleBold: "tech francaise et internationale",
   illustrations: [
     {
-      source: "STARTUPS_Illustration.png",
       caption: "DES STARTUPS QUI DECOLLENT",
     },
     {
-      source: "SCALES UP_Illustration.png",
       caption: "DES SCALES UPS",
     },
     {
-      source: "GEANTS_Illustration.png",
       caption: "DES GEANTS DE LA TECH",
     },
   ],
 };
 
-export function Showcase({}) {
+export function Showcase() {
   const {
     talentGeantIllustration,
     talentScaleupIllustration,

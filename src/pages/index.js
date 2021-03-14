@@ -1,5 +1,4 @@
 import React from "react";
-import { graphql, Link, useStaticQuery } from "gatsby";
 import { Layout } from "../components/Layout";
 import Talent from "../talent";
 // TODO SEo

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../components/Button";
 import BackgroundImage from "gatsby-background-image-es5";
 import { useStaticQuery, graphql } from "gatsby";
@@ -16,7 +16,14 @@ export const privacy = {
 export function Privacy({ props }) {
   const data = useStaticQuery(graphql`
     query PrivacyTalent {
-      privacyTalent: file(name: { eq: "tattoo-man-blur" }) {
+      privacyTalent: file(name: { eq: "tattoo-man-blur-centered_talents" }) {
+        cloudinary: childCloudinaryAsset {
+          fluid {
+            ...CloudinaryAssetFluid
+          }
+        }
+      }
+      privacyTalentVisible: file(name: { eq: "tattoo-man-centered_talents" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -26,6 +33,9 @@ export function Privacy({ props }) {
     }
   `);
   const privacyImg = data.privacyTalent.cloudinary.fluid;
+  const privacyImgVisible = data.privacyTalentVisible.cloudinary.fluid;
+  const [visible, setVisible] = useState(false);
+
   return (
     <section className="relative p-0 lg:h-screen flex flex-col lg:flex-row">
       <div className="opacity-20 top-0 left-0 right-0 bottom-0 absolute bg-gradient-to-tl from-purple-600 to-white z-10"></div>
@@ -42,8 +52,9 @@ export function Privacy({ props }) {
       <BackgroundImage
         Tag="div"
         fluid={privacyImg}
-        className="bg-center relative grid grid-cols-5 grid-rows-7 md:grid-rows-8 md:grid-cols-8 lg:grid-rows-5 lg:grid-cols-12 xl:grid-rows-9 content-center lg:items-center w-full lg:w-1/2"
+        className="bg-top relative grid grid-cols-5 grid-rows-7 md:grid-rows-8 md:grid-cols-8 lg:grid-rows-5 lg:grid-cols-12 xl:grid-rows-9 content-center lg:items-center w-full lg:w-1/2"
         style={{ minHeight: "450px" }}
+        onClick={() => setVisible(!visible)}
       >
         <div className="row-start-2 col-start-2 md:row-start-4 md:col-start-3 lg:row-start-3 lg:col-start-2 xl:row-start-3 relative z-20 w-20 md:w-32 lg:w-40"></div>
       </BackgroundImage>

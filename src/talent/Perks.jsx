@@ -12,19 +12,16 @@ const perks = {
   illustration2: "/perks_iphone.png",
   items: [
     {
-      icon: "/Icon_Match.svg",
       title: "Matching sans préjugés",
       content:
         "Notre algoritme prend en compte uniquement les données utiles à votre recherche d’emploi",
     },
     {
-      icon: "/Icon_Anonymisation.svg",
       title: "Anonymisation de votre profil",
       content:
         "Rendez vous visible auprès de sociétés qui utilisent Blend, en sachant que votre identité est protégée et que vous ne serez pas rejeté pour les mauvaises raisons. Nous excluons les meme informations que dans notre matching",
     },
     {
-      icon: "/Icon_Controls.svg",
       title: "Votre privacy sous controle",
       content:
         "Les recruteurs peuvent voir votre nom et vos coordonnées seulement si vous acceptez leur demande. Vos données vous appartiennent, pourquoi seraient-elle être en libre service et votre recherche d’emploi visible à tous?",
@@ -32,7 +29,7 @@ const perks = {
   ],
 };
 
-export function Perks({}) {
+export function Perks() {
   const {
     talentOkIcon,
     talentMatchIcon,

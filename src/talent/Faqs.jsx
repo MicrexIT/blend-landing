@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import { Accordion } from "../components/Accordion";
 import { Button } from "../components/Button";
 export function Faqs() {
@@ -46,7 +46,6 @@ export function Faqs() {
 }
 
 function QuestionAndAnswer({ faqs }) {
-  const [activeEventKey, setActiveEventKey] = useState(0);
   return (
     <div
       className="bg-white bg-opacity-20 questionAndAnswer px-5 flex flex-col justify-center"

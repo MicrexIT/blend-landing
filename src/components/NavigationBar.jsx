@@ -3,8 +3,6 @@ import { Logo } from "./Logo";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import { Menu } from "../components/Menu";
 
-const defaultHorizontalPadding = "px-4 md:px-6 lg:px-16";
-const defaultVerticalPadding = "py-2 md:py-3 lg:py-4";
 export function NavigationBar({ ...props }) {
   const [headerVisible, setHeaderVisible] = useState({
     transition: "all 200ms ease-in",

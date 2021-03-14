@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Image from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
 
@@ -46,7 +46,13 @@ export function Footer({ ...props }) {
 
       <div className="flex items-center flex-row justify-between text-gray-500 text-3xs md:text-2xs lg:text-xs">
         <span className="">30/32 Boulevard de Sébastopol, 75004, Paris</span>
-        <span>Made with 💜 by ©Blend 2021</span>
+        <span>
+          Made with{" "}
+          <span role="img" aria-label="heart">
+            💜{" "}
+          </span>
+          by ©Blend 2021
+        </span>
       </div>
     </footer>
   );
