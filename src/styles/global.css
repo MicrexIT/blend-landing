@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-xs md:text-base lg:text-lg;
+  }
+  nav {
+    @apply sticky shadow-lg bg-white top-0 left-0 right-0 z-50;
+    @apply flex flex-row justify-between items-center;
+    @apply px-4 md:px-6 lg:px-16;
+    @apply py-2 md:py-3 lg:py-4;
+  }
+  a,
+  button {
+    @apply transform-none outline-none;
+    @apply cursor-pointer;
+    @apply text-center align-middle;
+  }
+  a:hover,
+  button:hover {
+    @apply outline-none;
+  }
+
+  a:focus,
+  button:focus {
+    @apply outline-none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  button {
+    @apply font-serif;
+  }
+
+  h1 {
+    @apply text-white;
+    @apply text-5xl md:text-6xl lg:text-7xl;
+  }
+  h1:focus {
+    @apply outline-none;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+  h3 {
+    @apply text-white text-xl md:text-2xl;
+  }
+  button {
+    @apply text-2xs md:text-lg;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply flex items-center justify-center;
+    @apply border bg-orange text-white border-orange-400;
+    @apply w-42 md:w-52;
+    @apply rounded-lg;
+  }
+
+  .btn button {
+    @apply w-full;
+    @apply text-2xs md:text-lg;
+  }
+
+  .btn:hover {
+    @apply bg-white text-orange;
+  }
+
+  .btn:focus {
+    @apply border-2;
+  }
+
+  .btn.secondary {
+    @apply bg-purple text-white border-purple;
+  }
+  .btn.secondary:hover {
+    @apply text-purple;
+    @apply bg-white;
+  }
+  .btn.small {
+    @apply w-28 md:w-26 lg:w-28;
+  }
+
+  .illustration {
+    @apply flex flex-col items-center justify-center gap-4 md:gap-7 lg:gap-8;
+  }
+
+  .illustration .caption {
+    @apply text-center font-serif text-2xs md:text-xs lg:text-sm;
+  }
+
+  .icon .caption {
+    @apply text-xs md:text-sm;
+  }
+
+  .tag {
+    @apply font-serif font-medium text-4xs md:text-2xs;
+  }
+
+  .faq_question {
+    @apply font-serif font-semibold text-sm;
+  }
+
+  .footer {
+    @apply text-black font-sans text-4xs md:text-3xs lg:text-2xs;
+  }
+
+  .footer span,
+  .footer .link {
+    @apply cursor-pointer hover:opacity-50;
+  }
+
+  .home {
+    @apply min-h-screen bg-bottom;
+    @apply p-2;
+    @apply flex flex-col md:flex-row justify-between;
+  }
+
+  .home h1,
+  .home p {
+    @apply py-1 px-4;
+    @apply text-white;
+  }
+
+  .home h1:last-of-type {
+    @apply font-bold;
+  }
+
+  .home .message {
+    @apply flex flex-col;
+    @apply mb-7 mt-14 md:mt-20 lg:mt-40 ml-4 md:ml-6 lg:ml-12;
+  }
+
+  .home .message p:last-of-type {
+    @apply mb-10 lg:mb-16;
+  }
+
+  .showcase {
+    @apply flex flex-col items-center gap-12 md:gap-16 lg:gap-21;
+    @apply pb-42 md:pb-48 lg:pb-60;
+    @apply pt-12 px-10 md:pt-20 lg:pt-36;
+    @apply relative z-10;
+  }
+  .showcase h2 {
+    @apply py-2 px-4;
+    @apply text-black text-center;
+  }
+  .showcase h2:last-of-type {
+    @apply font-bold;
+  }
+  .showcase .illustrations {
+    @apply flex flex-col md:flex-row items-center justify-center;
+    @apply md:items-baseline;
+    @apply gap-10 md:gap-21 lg:gap-28;
+  }
+  .main-features {
+    @apply default-padding-x;
+    @apply relative;
+    @apply bg-gradient-to-r from-white to-gray-400;
+  }
+  .flow-band {
+    @apply h-16 md:h-26 lg:h-44;
+    background: linear-gradient(90deg, #701dda -7.32%, #fe8c01 102.72%);
+    mix-blend-mode: normal;
+    box-shadow: 0px 4px 10px rgba(72, 72, 72, 0.25);
+    transform: skewY(12.76deg) translateY(40px);
+  }
+  .band1 {
+    transform: skewY(12.76deg) translateY(-50px);
+  }
+}
+
+@layer utilities {
+  .default-padding-x {
+    @apply px-4 md:px-6 lg:px-16;
+  }
+}

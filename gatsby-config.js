@@ -1,15 +1,34 @@
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
     title: "blend-landing",
   },
   plugins: [
-    "gatsby-plugin-postcss",
+   `gatsby-plugin-postcss`,
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        trackingId: "",
+        name: `cloudinary-images`,
+        path: `${__dirname}/src/cloudinary-images`,
       },
     },
+
+    {
+      resolve: "gatsby-transformer-cloudinary",
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        uploadFolder: "landingV1",
+      },
+    },
+    // {
+    //   resolve: "gatsby-plugin-google-analytics",
+    //   options: {
+    //     trackingId: "",
+    //   },
+    // },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
