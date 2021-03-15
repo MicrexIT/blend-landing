@@ -102,6 +102,15 @@ module.exports = {
     },
 
     extend: {
+      gridTemplateColumns: {
+        split: "1fr 1fr",
+        "three-split": "1/3 1/3 1/3",
+      },
+      gridTemplateRows: {
+        "title-with-split": "250px minmax(300px, 450px)",
+        "title-with-split-md": "250px minmax(400px, 550px)",
+        "title-with-split-lg": "minmax(550px, 1fr)",
+      },
       spacing: {
         8: "2rem",
         9.5: "2.3125rem",

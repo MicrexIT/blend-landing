@@ -64,7 +64,12 @@ export function Home() {
         <h1 className="">{bannerText.title}</h1>
         {bannerText.messages.map((m) => {
           return (
-            <p className="text-white sm:text-sm md:text-base lg:text-lg">{m}</p>
+            <p
+              key={m}
+              className="text-white sm:text-sm md:text-base lg:text-lg"
+            >
+              {m}
+            </p>
           );
         })}
         <Button label={bannerText.callToAction} />

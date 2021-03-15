@@ -27,14 +27,15 @@ export function Faqs() {
   };
 
   return (
-    <section
-      className="default-padding-x py-16 lg:py-7 flex flex-col md:items-start lg:items-center lg:flex-row lg:justify-between gap-16  xl:gap-80"
-      style={{
-        background:
-          "linear-gradient(270deg, rgba(254, 140, 1, 0.25) -79.53%, rgba(112, 29, 218, 0.10) 106.57%)",
-      }}
-    >
-      <div className="flex flex-col gap-4 md:gap-5 lg:gap-6">
+    <section className="relative default-padding-x py-16 lg:py-7 flex flex-col md:items-start lg:items-center lg:flex-row lg:justify-between gap-16  xl:gap-80 bg-opacity-50">
+      <div
+        style={{
+          background:
+            "linear-gradient(270deg, #D7ABAC 0, rgba(112, 29, 218, 0) 100%)",
+        }}
+        className="absolute top-0 bottom-0 left-0 right-0 opacity-50"
+      ></div>
+      <div className="relative z-10 flex flex-col gap-4 md:gap-5 lg:gap-6">
         <h2 className="text-black font-bold">{faqs.titleBold}</h2>
         <p className="text-black">{faqs.description}</p>
 
@@ -48,7 +49,7 @@ export function Faqs() {
 function QuestionAndAnswer({ faqs }) {
   return (
     <div
-      className="bg-white bg-opacity-20 questionAndAnswer px-5 flex flex-col justify-center"
+      className="relative z-10 bg-white bg-opacity-20 questionAndAnswer px-5 flex flex-col justify-center"
       style={{
         boxShadow: " 0px 2px 8px rgba(204, 190, 223, 0.4), 0px 0px 1px #cab7e6",
       }}

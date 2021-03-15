@@ -20,7 +20,7 @@ const IndexPage = () => {
       <Talent.MainFeatures />
       <Talent.Tags />
       <Talent.Privacy />
-      <Talent.Perks />
+      {/* <Talent.Perks /> */}
       <Talent.Faqs />
     </Layout>
   );

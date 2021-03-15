@@ -113,20 +113,25 @@ export function Perks() {
       </div>
       <div className="flow-band skew-y-12 relative"></div>
       <div
-        style={{ minHeight: "535px" }}
-        className="relative z-10 flex flex-row flex-wrap w-screen items-center  justify-between pr-8"
+        // style={{ minHeight: "535px" }}
+        // className="relative z-10 flex flex-row flex-wrap w-screen items-center justify-center pr-8"
+        className="relative z-10 w-screen grid grid-cols-split grid-rows-title-with-split items-center "
+        // style={{ minHeight: "700px" }}
       >
-        <div className="w-full lg:w-1/4 lg:order-2 flex flex-col items-center">
+        {/* <div className="row-start-1 col-span-2 w-full lg:w-1/4 lg:order-2 flex flex-col items-center"> */}
+        <div className=" self-center row-start-1 col-span-2 w-full h-443 flex flex-col items-center justify-center">
           <h2 className="text-white font-medium">{perks.titleNormal}</h2>
           <h2 className="text-white font-bold mb-10 md:mb-12 lg:mb-16 xl:mb-20">
             {perks.titleBold}
           </h2>
           <Button />
         </div>
-        <div className="w-1/3 lg:w-1/4 lg:order-1">
+        {/* <div className="col-span-1 row-start-2 w-1/3 lg:w-1/4 lg:order-1 self-start"> */}
+        <div className="col-span-1 row-start-2 self-stretch max-h-550">
           <Image fluid={jobOfferLeftSource} />
         </div>
-        <div className="w-1/3 md:w-1/4 lg:w-1/5 lg:order-3">
+        {/* <div className="col-span-1 row-start-2 col-start-2 w-1/3 md:w-1/4 lg:w-1/5 lg:order-3 self-end"> */}
+        <div className="col-span-1 row-start-2 col-start-2 self-end">
           <Image fluid={jobOfferRightSource} />
         </div>
       </div>
