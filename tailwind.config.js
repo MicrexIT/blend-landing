@@ -102,6 +102,19 @@ module.exports = {
     },
 
     extend: {
+      lineHeight: {
+        13: "13px",
+        18: "18px",
+        "5xl": "64px",
+        "4xl": "56px",
+        "3xl": "48px",
+        "2xl": "40px",
+        xl: "32px",
+      },
+      letterSpacing: {
+        1: "0.01em",
+        2: "0.02em",
+      },
       gridTemplateColumns: {
         split: "1fr 1fr",
         "three-split": "1/3 1/3 1/3",
@@ -122,11 +135,14 @@ module.exports = {
         42: "10.5625rem",
         43: "11.25rem",
         52: "13.75rem",
+        310: "310px",
         350: "21.875rem",
         363: "22.6875rem",
+        367: "367px",
         443: "27rem",
         500: "500px",
         550: "34.375rem",
+        570: "570px",
         lg: "31.75rem",
         xl: "37.5rem",
       },
@@ -135,5 +151,8 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/aspect-ratio")],
+  plugins: [
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/line-clamp"),
+  ],
 };

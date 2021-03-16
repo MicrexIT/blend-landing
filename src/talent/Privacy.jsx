@@ -14,16 +14,28 @@ export const privacy = {
 };
 
 export function Privacy({ props }) {
-  const data = useStaticQuery(graphql`
+  const {
+    privacyTalentSm,
+    privacyTalentMd,
+    privacyTalentLg,
+  } = useStaticQuery(graphql`
     query PrivacyTalent {
-      privacyTalent: file(name: { eq: "tattoo-man-blur-centered_talents" }) {
+      privacyTalentSm: file(name: { eq: "man-tattoos-talents-s" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
           }
         }
       }
-      privacyTalentVisible: file(name: { eq: "tattoo-man-centered_talents" }) {
+
+      privacyTalentMd: file(name: { eq: "man-tattoos-talents-m" }) {
+        cloudinary: childCloudinaryAsset {
+          fluid {
+            ...CloudinaryAssetFluid
+          }
+        }
+      }
+      privacyTalentLg: file(name: { eq: "man-tattoos-talents-l" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -32,9 +44,18 @@ export function Privacy({ props }) {
       }
     }
   `);
-  const privacyImg = data.privacyTalent.cloudinary.fluid;
-  const privacyImgVisible = data.privacyTalentVisible.cloudinary.fluid;
-  const [visible, setVisible] = useState(false);
+
+  const sources = [
+    privacyTalentSm.cloudinary.fluid,
+    {
+      ...privacyTalentMd.cloudinary.fluid,
+      media: `(min-width: 491px)`,
+    },
+    {
+      ...privacyTalentLg.cloudinary.fluid,
+      media: `(min-width: 1101px)`,
+    },
+  ];
 
   return (
     <section className="relative p-0 lg:h-screen flex flex-col lg:flex-row">
@@ -49,27 +70,14 @@ export function Privacy({ props }) {
         </div>
         <Button label={privacy.callToAction} secondary />
       </div>
-      {visible ? (
-        <BackgroundImage
-          Tag="div"
-          fluid={privacyImgVisible}
-          className="bg-top relative grid grid-cols-5 grid-rows-7 md:grid-rows-8 md:grid-cols-8 lg:grid-rows-5 lg:grid-cols-12 xl:grid-rows-9 content-center lg:items-center w-full lg:w-1/2"
-          style={{ minHeight: "450px" }}
-          onClick={() => setVisible(!visible)}
-        >
-          <div className="row-start-2 col-start-2 md:row-start-4 md:col-start-3 lg:row-start-3 lg:col-start-2 xl:row-start-3 relative z-20 w-20 md:w-32 lg:w-40"></div>
-        </BackgroundImage>
-      ) : (
-        <BackgroundImage
-          Tag="div"
-          fluid={privacyImg}
-          className="bg-top relative grid grid-cols-5 grid-rows-7 md:grid-rows-8 md:grid-cols-8 lg:grid-rows-5 lg:grid-cols-12 xl:grid-rows-9 content-center lg:items-center w-full lg:w-1/2"
-          style={{ minHeight: "450px" }}
-          onClick={() => setVisible(!visible)}
-        >
-          <div className="row-start-2 col-start-2 md:row-start-4 md:col-start-3 lg:row-start-3 lg:col-start-2 xl:row-start-3 relative z-20 w-20 md:w-32 lg:w-40"></div>
-        </BackgroundImage>
-      )}
+      <BackgroundImage
+        Tag="div"
+        fluid={sources}
+        className="bg-top relative grid grid-cols-5 grid-rows-7 md:grid-rows-8 md:grid-cols-8 lg:grid-rows-5 lg:grid-cols-12 xl:grid-rows-9 content-center lg:items-center w-full lg:w-1/2"
+        style={{ minHeight: "450px" }}
+      >
+        <div className="row-start-2 col-start-2 md:row-start-4 md:col-start-3 lg:row-start-3 lg:col-start-2 xl:row-start-3 relative z-20 w-20 md:w-32 lg:w-40"></div>
+      </BackgroundImage>
     </section>
   );
 }

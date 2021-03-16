@@ -14,7 +14,7 @@ export function Footer({ ...props }) {
         }
       }
 
-      linkedinIcon: file(name: { eq: "linkedin-footer-icon" }) {
+      linkedinIcon: file(name: { eq: "Linked-In" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -27,7 +27,7 @@ export function Footer({ ...props }) {
   const linkedinIcon = data.linkedinIcon.cloudinary.fluid;
 
   return (
-    <footer className="footer flex flex-col p-4 pt-12 md:p-6 justify-between gap-12 md:gap-20">
+    <footer className="footer flex flex-col p-4 pt-12 md:p-6 justify-between gap-12 md:gap-16">
       <div className="flex flex-col md:flex-row md:justify-between ">
         <div className="flex flex-col lg:flex-row lg:items-center gap-8 md:gap-11 lg:gap-26">
           <div className="link w-28 h-6 relative">
@@ -44,15 +44,18 @@ export function Footer({ ...props }) {
         </div>
       </div>
 
-      <div className="flex items-center flex-row justify-between text-gray-500 text-3xs md:text-2xs lg:text-xs">
-        <span className="">30/32 Boulevard de Sébastopol, 75004, Paris</span>
-        <span>
+      <div className="flex items-center flex-row justify-between">
+        <p className="text-gray-500 text-3xs md:text-2xs lg:text-xs">
+          30/32 Boulevard de Sébastopol, 75004, Paris,{" "}
+          <span className="underline">Mentions legales</span>
+        </p>
+        <p className="text-gray-500 text-3xs md:text-2xs lg:text-xs">
           Made with{" "}
           <span role="img" aria-label="heart">
             💜{" "}
           </span>
           by ©Blend 2021
-        </span>
+        </p>
       </div>
     </footer>
   );

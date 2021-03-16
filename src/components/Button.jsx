@@ -12,7 +12,7 @@ export function Button({
         secondary ? "secondary " : ""
       } btn`}
     >
-      <button className={`${small ? "py-0.5" : "py-1"}`}>{label}</button>
+      <button>{label}</button>
     </div>
   );
 }

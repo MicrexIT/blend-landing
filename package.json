@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^2.0.3",
+    "@tailwindcss/line-clamp": "^0.2.0",
     "dotenv": "^8.2.0",
     "gatsby": "^3.0.1",
     "gatsby-background-image-es5": "^1.4.1",

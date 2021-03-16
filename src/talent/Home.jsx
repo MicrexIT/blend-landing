@@ -5,8 +5,8 @@ import { TalentHomeIphone } from "../components/TalentHomeIphone";
 import { Button } from "../components/Button";
 
 const bannerText = {
-  titleBold: "Trouvez le job",
-  title: "Qui vous correspond",
+  title: "Trouvez le job",
+  titleBold: "Qui vous correspond",
   messages: [
     "Vous êtes plus que juste un CV. Vous méritez mieux q’une jungle.",
     "Notre mission est de trouver pour vous les meilleures opportunités.",
@@ -21,7 +21,7 @@ export function Home() {
     talentHomeBgLg,
   } = useStaticQuery(graphql`
     query TalentHomeBg {
-      talentHomeBgSm: file(name: { eq: "bg-home" }) {
+      talentHomeBgSm: file(name: { eq: "bg-talents-s" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -29,14 +29,14 @@ export function Home() {
         }
       }
 
-      talentHomeBgMd: file(name: { eq: "bg-home-md" }) {
+      talentHomeBgMd: file(name: { eq: "bg-talents-m" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
           }
         }
       }
-      talentHomeBgLg: file(name: { eq: "bg-home-lg" }) {
+      talentHomeBgLg: file(name: { eq: "bg-talents-l" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -54,24 +54,27 @@ export function Home() {
     },
     {
       ...talentHomeBgLg.cloudinary.fluid,
-      media: `(min-width: 1101px)`,
+      media: `(min-width: 921px)`,
     },
   ];
   return (
-    <BackgroundImage fluid={sources} Tag="section" className="home relative">
+    <BackgroundImage
+      fluid={sources}
+      Tag="section"
+      className="home relative bg-bottom"
+    >
       <div className="message">
-        <h1>{bannerText.titleBold}</h1>
-        <h1 className="">{bannerText.title}</h1>
-        {bannerText.messages.map((m) => {
-          return (
-            <p
-              key={m}
-              className="text-white sm:text-sm md:text-base lg:text-lg"
-            >
-              {m}
-            </p>
-          );
-        })}
+        <h1>
+          {bannerText.title}
+          <br />
+          <span>{bannerText.titleBold}</span>
+        </h1>
+
+        <p className="text-white sm:text-sm md:text-base lg:text-lg w-367 md:w-500 lg:w-550">
+          {bannerText.messages.map((m) => {
+            return <span key={m}>{`${m} `} </span>;
+          })}
+        </p>
         <Button label={bannerText.callToAction} />
       </div>
       <TalentHomeIphone />

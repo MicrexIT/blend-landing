@@ -12,14 +12,6 @@ export function Accordion({ title, children }) {
           }
         }
       }
-
-      rightAccordionIcon: file(name: { eq: "arrow-right-icon" }) {
-        cloudinary: childCloudinaryAsset {
-          fluid {
-            ...CloudinaryAssetFluid
-          }
-        }
-      }
     }
   `);
 
@@ -37,27 +29,20 @@ export function Accordion({ title, children }) {
   };
 
   const downSource = downAccordionIcon.cloudinary.fluid;
-  const rightSource = rightAccordionIcon.cloudinary.fluid;
 
   return (
-    <div className="py-7  text-purple-800 border-white border-b">
+    <div className="relatiive z-30 py-7 text-purple-800 border-white border-b">
       <div
         className=" flex flex-row justify-between items-center cursor-pointer"
         onClick={() => setOpen(!isOpen)}
       >
         <Question>{title}</Question>
-        {isOpen ? (
-          <div style={{ width: "14px" }}>
-            <Image fluid={downSource} />
-          </div>
-        ) : (
-          <div style={{ width: "7px" }}>
-            <Image fluid={rightSource} />
-          </div>
-        )}
+        <div style={{ width: "14px", rotate: isOpen ? "" : "rotate(270deg)" }}>
+          <Image fluid={downSource} />
+        </div>
       </div>
       <div style={isOpen ? defaultStyle : collapsedStyle}>
-        <p className="py-4">{children}</p>
+        <p className="py-4 text-purple-800">{children}</p>
       </div>
     </div>
   );

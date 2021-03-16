@@ -39,9 +39,29 @@ const tags = {
   ],
 };
 export function Tags({ ...props }) {
-  const { talentTagsBg } = useStaticQuery(graphql`
+  const {
+    talentTagsBgLg,
+    talentTagsBgMd,
+    talentTagsBgSm,
+  } = useStaticQuery(graphql`
     query TalentTagsBg {
-      talentTagsBg: file(name: { eq: "bg-talents-tags" }) {
+      talentTagsBgLg: file(name: { eq: "bg-tags-talents-l" }) {
+        cloudinary: childCloudinaryAsset {
+          fluid {
+            ...CloudinaryAssetFluid
+          }
+        }
+      }
+
+      talentTagsBgMd: file(name: { eq: "bg-tags-talents-m" }) {
+        cloudinary: childCloudinaryAsset {
+          fluid {
+            ...CloudinaryAssetFluid
+          }
+        }
+      }
+
+      talentTagsBgSm: file(name: { eq: "bg-tags-talents-s" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -50,12 +70,22 @@ export function Tags({ ...props }) {
       }
     }
   `);
-  const source = talentTagsBg.cloudinary.fluid;
+  const sources = [
+    talentTagsBgSm.cloudinary.fluid,
+    {
+      ...talentTagsBgMd.cloudinary.fluid,
+      media: `(min-width: 491px)`,
+    },
+    {
+      ...talentTagsBgLg.cloudinary.fluid,
+      media: `(min-width: 1101px)`,
+    },
+  ];
   return (
     <BackgroundImage
-      fluid={source}
+      fluid={sources}
       Tag="section"
-      className="py-12 md:py-24 lg:py-36 default-padding-x flex flex-col items-center text-center "
+      className="py-12 md:py-20 lg:py-28 default-padding-x flex flex-col items-center text-center "
     >
       <div className="mb-10 md:mb-20  flex flex-col items-center gap-5">
         <h2 className="text-white font-bold">{tags.titleBold}</h2>

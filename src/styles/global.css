@@ -28,6 +28,15 @@
     @apply outline-none;
   }
 
+  h1 span,
+  h2 span,
+  h3 span,
+  h4 span,
+  h5 span,
+  h6 span {
+    @apply font-bold block;
+  }
+
   h1,
   h2,
   h3,
@@ -41,18 +50,26 @@
   h1 {
     @apply text-white;
     @apply text-5xl md:text-6xl lg:text-7xl;
+    @apply leading-2xl md:leading-3xl lg:leading-4xl;
+ 
   }
   h1:focus {
     @apply outline-none;
+    @apply tracking-2;
   }
   h2 {
     @apply text-3xl md:text-4xl lg:text-5xl;
+    @apply leading-xl md:leading-2xl lg:leading-3xl;
   }
   h3 {
     @apply text-white text-xl md:text-2xl;
+    @apply leading-5 md:leading-xl;
   }
   button {
     @apply text-2xs md:text-lg;
+  },
+  p {
+    @apply leading-5 md:leading-6 font-normal font-sans text-black;
   }
 }
 
@@ -61,11 +78,15 @@
     @apply flex items-center justify-center;
     @apply border bg-orange text-white border-orange-400;
     @apply w-42 md:w-52;
+    @apply leading-13 md:leading-18;
+    @apply tracking-1;
     @apply rounded-lg;
+    @apply p-3 px-5;
   }
 
   .btn button {
     @apply w-full;
+    @apply align-baseline;
     @apply text-2xs md:text-lg;
   }
 
@@ -84,17 +105,12 @@
     @apply text-purple;
     @apply bg-white;
   }
+
   .btn.small {
     @apply w-28 md:w-26 lg:w-28;
+    @apply p-1 px-5;
   }
 
-  .illustration {
-    @apply flex flex-col items-center justify-center gap-4 md:gap-7 lg:gap-8;
-  }
-
-  .illustration .caption {
-    @apply text-center font-serif text-2xs md:text-xs lg:text-sm;
-  }
 
   .icon .caption {
     @apply text-xs md:text-sm;
@@ -119,23 +135,26 @@
 
   .home {
     @apply min-h-screen bg-bottom;
-    @apply p-2;
-    @apply flex flex-col md:flex-row justify-between;
+    @apply p-2 md:pb-4;
+    @apply px-4 md:px-6 lg:px-16;
+    @apply flex flex-col md:flex-row justify-between gap-1 md:gap-5 lg:gap-6;
   }
 
   .home h1,
   .home p {
-    @apply py-1 px-4;
+    @apply py-1; 
     @apply text-white;
   }
 
-  .home h1:last-of-type {
-    @apply font-bold;
-  }
 
   .home .message {
-    @apply flex flex-col;
-    @apply mb-7 mt-14 md:mt-20 lg:mt-40 ml-4 md:ml-6 lg:ml-12;
+    @apply flex flex-col gap-1 md:gap-5 lg:gap-6;
+    @apply mb-7 mt-14 md:mt-20 lg:mt-40;
+  }
+
+
+  .home .message p {
+    @apply leading-5 md:leading-6 font-normal font-sans; 
   }
 
   .home .message p:last-of-type {
@@ -143,23 +162,33 @@
   }
 
   .showcase {
-    @apply flex flex-col items-center gap-12 md:gap-16 lg:gap-21;
+    @apply flex flex-col items-center justify-center gap-12 md:gap-16 xl:gap-21;
     @apply pb-42 md:pb-48 lg:pb-60;
-    @apply pt-12 px-10 md:pt-20 lg:pt-36;
+    @apply pt-10 px-4 md:pt-20 lg:pt-32;
     @apply relative z-10;
   }
   .showcase h2 {
     @apply py-2 px-4;
     @apply text-black text-center;
   }
-  .showcase h2:last-of-type {
-    @apply font-bold;
-  }
+
   .showcase .illustrations {
-    @apply flex flex-col md:flex-row items-center justify-center;
-    @apply md:items-baseline;
-    @apply gap-10 md:gap-21 lg:gap-28;
+    @apply w-full flex flex-col md:flex-row items-center justify-center md:px-12;
+    @apply md:items-center md:justify-between xl:justify-center;
+    @apply gap-10 xl:gap-20;
   }
+
+  .illustration {
+    @apply md:w-1/3;
+    @apply flex flex-col items-center justify-center gap-4 md:gap-7 lg:gap-8 xl:gap-9;
+  }
+
+  .illustration .caption {
+    @apply text-center font-serif font-semibold text-2xs lg:text-sm text-purple-800;
+    @apply w-full block;
+    @apply tracking-1 leading-3 lg:leading-4;
+  }
+
   .main-features {
     @apply default-padding-x;
     @apply relative;
@@ -168,7 +197,6 @@
   .flow-band {
     @apply h-16 md:h-26 lg:h-44;
     background: linear-gradient(90deg, #701dda -7.32%, #fe8c01 102.72%);
-    mix-blend-mode: normal;
     box-shadow: 0px 4px 10px rgba(72, 72, 72, 0.25);
     transform: skewY(12.76deg) translateY(40px);
   }
