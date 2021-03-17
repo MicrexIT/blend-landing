@@ -19,15 +19,15 @@ export function CheckTagFixed({ content, right = false }) {
 
   let positionStyle = {
     left: "-175px",
-    bottom: "34px",
+    bottom: "41px",
   };
   if (right) {
     positionStyle = {
-      right: "-160px",
-      bottom: "0px",
+      right: "-163px",
+      bottom: "10px",
       maxWidth: "20rem",
       minWidth: "16rem",
-      paddingRight: "11px",
+      paddingRight: "10px",
     };
   }
   return (
@@ -41,9 +41,9 @@ export function CheckTagFixed({ content, right = false }) {
         <Image fluid={source} />
       </div>
       <div style={{ width: "185px" }}>
-        <span className="font-serif text-sm font-semibold text-left  text-purple-800 ">
+        <p className="font-serif text-left md:leading-18 tracking-1px text-2xs font-medium text-purple-800 ">
           {content}
-        </span>
+        </p>
       </div>
     </div>
   );

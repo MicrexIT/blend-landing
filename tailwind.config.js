@@ -103,6 +103,7 @@ module.exports = {
 
     extend: {
       lineHeight: {
+        2: "10px",
         13: "13px",
         18: "18px",
         "5xl": "64px",
@@ -112,6 +113,7 @@ module.exports = {
         xl: "32px",
       },
       letterSpacing: {
+        "1px": "1px",
         1: "0.01em",
         2: "0.02em",
       },

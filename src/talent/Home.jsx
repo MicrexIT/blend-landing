@@ -59,13 +59,7 @@ export function Home() {
     },
   ];
   return (
-    <BackgroundImage
-      fadeIn={true}
-      durationFadeIn={10000}
-      fluid={sources}
-      Tag="section"
-      className="home bg-bottom"
-    >
+    <BackgroundImage fluid={sources} Tag="section" className="home bg-bottom">
       <BackgroundGrandientBand />
       <div className="message relative z-20">
         <h1>
