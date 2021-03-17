@@ -108,7 +108,7 @@
 
   .btn.small {
     @apply w-28 md:w-26 lg:w-28;
-    @apply p-1 px-5;
+    @apply p-1.5 px-5;
   }
 
   .icon .caption {

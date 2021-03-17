@@ -23,7 +23,7 @@ module.exports = {
         apiSecret: process.env.CLOUDINARY_API_SECRET,
         uploadFolder: "landingV1",
         // enableDefaultTransformations: true,
-        fluidMaxWidth: 1800,
+        // fluidMaxWidth: 1800,
       },
     },
     // {
