@@ -95,7 +95,7 @@ export function Perks() {
           return (
             <div
               key={title}
-              className="flex flex-col items-center gap-2 md:gap-3 lg:gap-4 w-1/2 lg:w-2/7"
+              className="flex flex-col items-center gap-2 md:gap-3 lg:gap-4 p-1 sm:w-1/2 lg:w-2/7"
             >
               {/* <div className="mb-w-12 md:w-14 mb-5 lg:mb-10">
                 <img src={icon} />
@@ -119,7 +119,7 @@ export function Perks() {
         // style={{ minHeight: "700px" }}
       >
         {/* <div className="row-start-1 col-span-2 w-full lg:w-1/4 lg:order-2 flex flex-col items-center"> */}
-        <div className=" self-center row-start-1 col-span-3 lg:row-span-1 lg:col-span-1 w-full h-443 flex flex-col items-center justify-center gap-4">
+        <div className=" self-center row-start-1 col-span-3 lg:row-span-1 lg:col-span-1 w-full flex flex-col items-center justify-center gap-4">
           <h2 className="text-white font-medium">{perks.titleNormal}</h2>
           <h2 className="text-white font-bold mb-10 md:mb-12 lg:mb-16 xl:mb-20">
             {perks.titleBold}
@@ -127,7 +127,7 @@ export function Perks() {
           <Button />
         </div>
         {/* <div className="col-span-1 row-start-2 w-1/3 lg:w-1/4 lg:order-1 self-start"> */}
-        <div className="col-span-1 row-start-2 lg:row-start-1 col-start-1 self-stretch lg:self-center max-h-550 max-w-xs lg:max-w-sm">
+        <div className="col-span-1 row-start-2 lg:row-start-1 col-start-1 self-stretch lg:self-center max-w-xs lg:max-w-sm">
           <Image fluid={jobOfferLeftSource} />
         </div>
         {/* <div className="col-span-1 row-start-2 col-start-2 w-1/3 md:w-1/4 lg:w-1/5 lg:order-3 self-end"> */}

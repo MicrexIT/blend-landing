@@ -120,7 +120,7 @@ module.exports = {
         "three-split": "1/3 1/3 1/3",
       },
       gridTemplateRows: {
-        "title-with-split": "250px minmax(300px, 450px)",
+        "title-with-split": "250px minmax(200px, auto)",
         "title-with-split-md": "250px minmax(400px, 550px)",
         "title-with-split-lg": "minmax(550px, 1fr)",
       },
@@ -139,6 +139,7 @@ module.exports = {
         350: "21.875rem",
         363: "22.6875rem",
         367: "367px",
+        400: "25rem",
         443: "27rem",
         500: "500px",
         550: "34.375rem",
@@ -151,8 +152,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [
-    require("@tailwindcss/aspect-ratio"),
-    require("@tailwindcss/line-clamp"),
-  ],
+  plugins: [],
 };

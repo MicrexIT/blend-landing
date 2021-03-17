@@ -36,7 +36,7 @@ export function TalentHomeIphone() {
     },
   ];
   return (
-    <div className="flex flex-col md:justify-end lg:justify-center items-center">
+    <div className="flex flex-col md:justify-end lg:justify-center items-center relative z-20">
       <div className="block w-52 md:w-76 xl:w-80">
         <Image fluid={sources} />
       </div>

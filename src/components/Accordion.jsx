@@ -29,6 +29,7 @@ export function Accordion({ title, children }) {
   };
 
   const downSource = downAccordionIcon.cloudinary.fluid;
+  const rotate = isOpen ? "" : "rotate(270deg)";
 
   return (
     <div className="relatiive z-30 py-7 text-purple-800 border-white border-b">
@@ -37,7 +38,7 @@ export function Accordion({ title, children }) {
         onClick={() => setOpen(!isOpen)}
       >
         <Question>{title}</Question>
-        <div style={{ width: "14px", rotate: isOpen ? "" : "rotate(270deg)" }}>
+        <div style={{ width: "14px", transform: rotate }}>
           <Image fluid={downSource} />
         </div>
       </div>

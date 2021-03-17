@@ -49,7 +49,7 @@ export function Footer({ ...props }) {
           30/32 Boulevard de Sébastopol, 75004, Paris,{" "}
           <span className="underline">Mentions legales</span>
         </p>
-        <p className="text-gray-500 text-3xs md:text-2xs lg:text-xs">
+        <p className="text-gray-500 text-3xs md:text-2xs lg:text-xs text-right">
           Made with{" "}
           <span role="img" aria-label="heart">
             💜{" "}

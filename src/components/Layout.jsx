@@ -4,6 +4,9 @@ import "tailwindcss/tailwind.css";
 import { NavigationBar } from "./NavigationBar";
 import { Footer } from "./Footer";
 
+import "@fontsource/open-sans"; // Defaults to weight 400.
+import "@fontsource/poppins"; // Defaults to weight 400.
+
 import "../styles/global.css";
 
 export function Layout({ children }) {

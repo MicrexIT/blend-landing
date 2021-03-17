@@ -50,7 +50,7 @@ export function MainFeatures({ ...props }) {
       </div>
 
       <div className=" flex flex-col items-center justify-end z-20 lg:w-2/3 gap-5">
-        <div className="w-72 md:w-96 lg:w-443 xl:w-500 relative">
+        <div className="w-72 md:w-96 lg:w-400 xl:w-500 relative">
           <Image fluid={source} className="z-30" />
           <CheckTagFixed
             content={"Analyze du culture fit, matching affinataire"}

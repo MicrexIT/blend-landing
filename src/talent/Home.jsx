@@ -3,6 +3,7 @@ import BackgroundImage from "gatsby-background-image-es5";
 import { useStaticQuery, graphql } from "gatsby";
 import { TalentHomeIphone } from "../components/TalentHomeIphone";
 import { Button } from "../components/Button";
+import { BackgroundGrandientBand } from "../components/BackgroundGradientBrand";
 
 const bannerText = {
   title: "Trouvez le job",
@@ -21,7 +22,7 @@ export function Home() {
     talentHomeBgLg,
   } = useStaticQuery(graphql`
     query TalentHomeBg {
-      talentHomeBgSm: file(name: { eq: "bg-talents-s" }) {
+      talentHomeBgSm: file(name: { eq: "bg-home-talents-sm" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -29,14 +30,14 @@ export function Home() {
         }
       }
 
-      talentHomeBgMd: file(name: { eq: "bg-talents-m" }) {
+      talentHomeBgMd: file(name: { eq: "bg-home-talents-md" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
           }
         }
       }
-      talentHomeBgLg: file(name: { eq: "bg-talents-l" }) {
+      talentHomeBgLg: file(name: { eq: "bg-home-talents-lg" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -58,12 +59,9 @@ export function Home() {
     },
   ];
   return (
-    <BackgroundImage
-      fluid={sources}
-      Tag="section"
-      className="home relative bg-bottom"
-    >
-      <div className="message">
+    <BackgroundImage fluid={sources} Tag="section" className="home bg-bottom">
+      <BackgroundGrandientBand />
+      <div className="message relative z-20">
         <h1>
           {bannerText.title}
           <br />
