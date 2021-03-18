@@ -15,10 +15,10 @@ import "../styles/global.css";
 
 export function Layout({ children }) {
   return (
-    <div className="relative overflow-x-hidden">
+    <div className="overflow-x-hidden">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>blend</title>
+        <title>Blend</title>
       </Helmet>
       <NavigationBar />
       <main className="overflow-x-hidden">{children}</main>

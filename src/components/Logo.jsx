@@ -17,7 +17,7 @@ export function Logo() {
 
   const logoImg = data.logoImage.cloudinary.fluid;
   return (
-    <div className=" w-21 md:w-24 lg:w-32">
+    <div className="relative z-50 w-21 md:w-24 lg:w-32">
       <Image fluid={logoImg} />
     </div>
   );

@@ -1,9 +1,6 @@
 import React from "react";
-import BackgroundImage from "gatsby-background-image-es5";
 import { useStaticQuery, graphql } from "gatsby";
-import { TalentHomeIphone } from "../components/TalentHomeIphone";
-import { Button } from "../components/Button";
-import { BackgroundGrandientBand } from "../components/BackgroundGradientBrand";
+import { Views } from "../views";
 
 const bannerText = {
   title: "Trouvez le job",
@@ -12,7 +9,7 @@ const bannerText = {
     "Vous êtes plus que juste un CV. Vous méritez mieux q’une jungle.",
     "Notre mission est de trouver pour vous les meilleures opportunités.",
   ],
-  callToAction: "commencer",
+  callToAction: "2mn pour s'inscrire",
 };
 
 export function Home() {
@@ -58,24 +55,5 @@ export function Home() {
       media: `(min-width: 921px)`,
     },
   ];
-  return (
-    <BackgroundImage fluid={sources} Tag="section" className="home bg-bottom">
-      <BackgroundGrandientBand />
-      <div className="message relative z-20">
-        <h1>
-          {bannerText.title}
-          <br />
-          <span>{bannerText.titleBold}</span>
-        </h1>
-
-        <p className="text-white sm:text-sm md:text-base lg:text-lg w-367 md:w-500 lg:w-550">
-          {bannerText.messages.map((m) => {
-            return <span key={m}>{`${m} `} </span>;
-          })}
-        </p>
-        <Button label={bannerText.callToAction} />
-      </div>
-      <TalentHomeIphone />
-    </BackgroundImage>
-  );
+  return <Views.Home sources={sources} bannerText={bannerText} />;
 }
