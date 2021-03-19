@@ -1,6 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { Views } from "../views";
+import { RecruiterHomePicture } from "../components/RecruiterHomePicure";
 
 const bannerText = {
   title: "Des profils qualifiés",
@@ -8,7 +9,7 @@ const bannerText = {
   messages: [
     "Remplissez votre pipeline avec des candidats qualifiés. Pas n’importe quel candidat.",
   ],
-  callToAction: "Obtenez votre accès gratuit",
+  callToAction: "Commencez maintenant",
 };
 
 export function Home() {
@@ -18,7 +19,7 @@ export function Home() {
     recruiterHomeBgLg,
   } = useStaticQuery(graphql`
     query RecruiterHomeBg {
-      recruiterHomeBgSm: file(name: { eq: "bg-home-entreprises" }) {
+      recruiterHomeBgSm: file(name: { eq: "bg-entreprises-home-small" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -26,14 +27,14 @@ export function Home() {
         }
       }
 
-      recruiterHomeBgMd: file(name: { eq: "bg-home-entreprises" }) {
+      recruiterHomeBgMd: file(name: { eq: "bg-entreprises-home-md" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
           }
         }
       }
-      recruiterHomeBgLg: file(name: { eq: "bg-home-entreprises" }) {
+      recruiterHomeBgLg: file(name: { eq: "bg-entreprises-home-lg" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -51,8 +52,12 @@ export function Home() {
     },
     {
       ...recruiterHomeBgLg.cloudinary.fluid,
-      media: `(min-width: 921px)`,
+      media: `(min-width: 1021px)`,
     },
   ];
-  return <Views.Home sources={sources} bannerText={bannerText} />;
+  return (
+    <Views.Home sources={sources} bannerText={bannerText} recruiter={true}>
+      <RecruiterHomePicture />
+    </Views.Home>
+  );
 }

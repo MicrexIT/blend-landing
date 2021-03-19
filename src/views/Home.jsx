@@ -1,14 +1,15 @@
-
 import React from "react";
 import BackgroundImage from "gatsby-background-image-es5";
-import { TalentHomeIphone } from "../components/TalentHomeIphone";
 import { Button } from "../components/Button";
 import { BackgroundGrandientBand } from "../components/BackgroundGradientBrand";
 
-
-export function Home({bannerText, sources }) {
+export function Home({ bannerText, sources, recruiter, children }) {
   return (
-    <BackgroundImage fluid={sources} Tag="section" className="home bg-bottom">
+    <BackgroundImage
+      fluid={sources}
+      Tag="section"
+      className={`home bg-bottom ${recruiter ? "recruiter" : ""}`}
+    >
       <BackgroundGrandientBand />
       <div className="message relative z-20">
         <h1>
@@ -22,9 +23,9 @@ export function Home({bannerText, sources }) {
             return <span key={m}>{`${m} `} </span>;
           })}
         </p>
-        <Button label={bannerText.callToAction} />
+        <Button label={bannerText.callToAction} large={recruiter} />
       </div>
-      <TalentHomeIphone />
+      {children}
     </BackgroundImage>
   );
 }

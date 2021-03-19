@@ -75,7 +75,7 @@
 
 @layer components {
   .btn {
-    @apply flex items-center justify-center;
+    /* @apply flex items-center justify-center; */
     @apply border bg-orange text-white border-orange-400;
     @apply w-42 md:w-52;
     @apply leading-13 md:leading-18;
@@ -84,9 +84,13 @@
     @apply p-3 px-5;
   }
 
+  .btn.large {
+    @apply w-220 md:w-310;
+  }
+
   .btn button {
     @apply w-full;
-    @apply align-baseline;
+    /* @apply align-baseline; */
     @apply text-2xs md:text-lg;
   }
 
@@ -137,6 +141,12 @@
     @apply p-2 md:pb-4;
     @apply px-4 md:px-6 lg:px-16;
     @apply flex flex-col md:flex-row justify-between gap-1 md:gap-5 lg:gap-6;
+  }
+
+  .home.recruiter {
+    @apply px-4 md:pl-6 md:pr-1 lg:pl-16;
+    @apply md:items-center;
+    @apply lg:pb-6;
   }
 
   .home h1,

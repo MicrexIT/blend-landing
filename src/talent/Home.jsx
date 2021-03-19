@@ -1,4 +1,5 @@
 import React from "react";
+import { TalentHomeIphone } from "../components/TalentHomeIphone";
 import { useStaticQuery, graphql } from "gatsby";
 import { Views } from "../views";
 
@@ -55,5 +56,5 @@ export function Home() {
       media: `(min-width: 921px)`,
     },
   ];
-  return <Views.Home sources={sources} bannerText={bannerText} />;
+  return <Views.Home sources={sources} bannerText={bannerText} ><TalentHomeIphone/></Views.Home> ;
 }
