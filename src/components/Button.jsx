@@ -9,9 +9,9 @@ export function Button({
 }) {
   return (
     <div
-      className={`${small ? "small " : " "}${secondary ? "secondary " : ""}${
-        large ? "large " : " "
-      }btn`}
+      className={`${small ? "small " : ""}${secondary ? "secondary " : ""}${
+        large ? "large " : ""
+      } btn`}
     >
       <button>{label}</button>
     </div>
