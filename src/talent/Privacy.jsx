@@ -53,7 +53,7 @@ export function Privacy({ props }) {
     },
     {
       ...privacyTalentLg.cloudinary.fluid,
-      media: `(min-width: 1101px)`,
+      media: `(min-width: 1021px)`,
     },
   ];
 

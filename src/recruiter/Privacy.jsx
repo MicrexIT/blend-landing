@@ -49,7 +49,7 @@ export function Privacy({ props }) {
     recruiterComputerSm.cloudinary.fluid,
     {
       ...recruiterComputerMd.cloudinary.fluid,
-      media: `(min-width: 451px)`,
+      media: `(min-width: 491px)`,
     },
     {
       ...recruiterComputerLg.cloudinary.fluid,

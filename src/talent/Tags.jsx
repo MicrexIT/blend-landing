@@ -44,7 +44,7 @@ export function Tags({ ...props }) {
     talentTagsBgSm,
   } = useStaticQuery(graphql`
     query TalentTagsBg {
-      talentTagsBgLg: file(name: { eq: "bg-tags-talents-l" }) {
+      talentTagsBgLg: file(name: { eq: "bg-tags-talents-lg" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -52,7 +52,7 @@ export function Tags({ ...props }) {
         }
       }
 
-      talentTagsBgMd: file(name: { eq: "bg-tags-talents-m" }) {
+      talentTagsBgMd: file(name: { eq: "bg-tags-talents-md" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -60,7 +60,7 @@ export function Tags({ ...props }) {
         }
       }
 
-      talentTagsBgSm: file(name: { eq: "bg-tags-talents-s" }) {
+      talentTagsBgSm: file(name: { eq: "bg-tags-talents-sm" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
