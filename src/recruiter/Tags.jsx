@@ -36,9 +36,29 @@ const tags = {
   ],
 };
 export function Tags({ ...props }) {
-  const { recruiterTagsBg } = useStaticQuery(graphql`
+  const {
+    recruiterTagsBgSm,
+    recruiterTagsBgMd,
+    recruiterTagsBgLg,
+  } = useStaticQuery(graphql`
     query RecruiterTagsBg {
-      recruiterTagsBg: file(name: { eq: "bg-tags-entreprises" }) {
+      recruiterTagsBgSm: file(name: { eq: "bg-tags-entreprises" }) {
+        cloudinary: childCloudinaryAsset {
+          fluid {
+            ...CloudinaryAssetFluid
+          }
+        }
+      }
+
+      recruiterTagsBgMd: file(name: { eq: "bg-tags-entreprises" }) {
+        cloudinary: childCloudinaryAsset {
+          fluid {
+            ...CloudinaryAssetFluid
+          }
+        }
+      }
+
+      recruiterTagsBgLg: file(name: { eq: "bg-tags-entreprises" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -47,6 +67,16 @@ export function Tags({ ...props }) {
       }
     }
   `);
-  const sources = [recruiterTagsBg.cloudinary.fluid];
+  const sources = [
+    recruiterTagsBgSm.cloudinary.fluid,
+    {
+      ...recruiterTagsBgMd.cloudinary.fluid,
+      media: `(min-width: 491px)`,
+    },
+    {
+      ...recruiterTagsBgLg.cloudinary.fluid,
+      media: `(min-width: 1101px)`,
+    },
+  ];
   return <Views.Tags sources={sources} tags={tags} />;
 }

@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Image from "gatsby-image";
 
 export function Accordion({ title, children }) {
-  const { downAccordionIcon, rightAccordionIcon } = useStaticQuery(graphql`
+  const { downAccordionIcon } = useStaticQuery(graphql`
     query AccordionIcon {
       downAccordionIcon: file(name: { eq: "arrow-down-icon" }) {
         cloudinary: childCloudinaryAsset {

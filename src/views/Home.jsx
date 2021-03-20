@@ -1,7 +1,7 @@
 import React from "react";
 import BackgroundImage from "gatsby-background-image-es5";
 import { Button } from "../components/Button";
-import { BackgroundGrandientBand } from "../components/BackgroundGradientBrand";
+import { BackgroundGrandientPurpleDark } from "../components/BackgroundGradientBrand";
 
 export function Home({ bannerText, sources, recruiter, children }) {
   return (
@@ -10,7 +10,7 @@ export function Home({ bannerText, sources, recruiter, children }) {
       Tag="section"
       className={`home bg-bottom ${recruiter ? "recruiter" : ""}`}
     >
-      <BackgroundGrandientBand />
+      <BackgroundGrandientPurpleDark />
       <div className="message relative z-20">
         <h1>
           {bannerText.title}

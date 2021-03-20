@@ -18,8 +18,9 @@ export function Privacy({ privacy, sources }) {
       <BackgroundImage
         Tag="div"
         fluid={sources}
-        className="bg-top relative grid grid-cols-5 grid-rows-7 md:grid-rows-8 md:grid-cols-8 lg:grid-rows-5 lg:grid-cols-12 xl:grid-rows-9 content-center lg:items-center w-full lg:w-1/2"
-        style={{ minHeight: "450px" }}
+        // className="bg-top relative grid grid-cols-5 grid-rows-7 md:grid-rows-8 md:grid-cols-8 lg:grid-rows-5 lg:grid-cols-12 xl:grid-rows-9 content-center lg:items-center w-full lg:w-1/2"
+        className="bg-top relative w-full lg:w-1/2 min-h-sm md:min-h-lg"
+        // style={{ minHeight: "500px" }}
       >
         <div className="row-start-2 col-start-2 md:row-start-4 md:col-start-3 lg:row-start-3 lg:col-start-2 xl:row-start-3 relative z-20 w-20 md:w-32 lg:w-40"></div>
       </BackgroundImage>

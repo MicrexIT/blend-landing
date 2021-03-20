@@ -36,6 +36,7 @@ const tags = {
     },
   ],
 };
+
 export function Tags({ ...props }) {
   const {
     talentTagsBgLg,

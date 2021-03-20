@@ -41,6 +41,7 @@ module.exports = {
     },
     minHeight: {
       ...defaultTheme.minHeight,
+      sm: "28.125rem",
       lg: "32.5rem",
       xl: "42rem",
       xxl: "52rem",

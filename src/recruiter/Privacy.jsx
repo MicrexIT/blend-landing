@@ -13,9 +13,29 @@ export const privacy = {
 };
 
 export function Privacy({ props }) {
-  const { recruiterComputer } = useStaticQuery(graphql`
+  const {
+    recruiterComputerSm,
+    recruiterComputerMd,
+    recruiterComputerLg,
+  } = useStaticQuery(graphql`
     query RecruiterComputer {
-      recruiterComputer: file(name: { eq: "mockupCV_entreprises" }) {
+      recruiterComputerSm: file(name: { eq: "computer-entreprises-s" }) {
+        cloudinary: childCloudinaryAsset {
+          fluid {
+            ...CloudinaryAssetFluid
+          }
+        }
+      }
+
+      recruiterComputerMd: file(name: { eq: "computer-entreprises-m" }) {
+        cloudinary: childCloudinaryAsset {
+          fluid {
+            ...CloudinaryAssetFluid
+          }
+        }
+      }
+
+      recruiterComputerLg: file(name: { eq: "computer-entreprises-l" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -25,7 +45,17 @@ export function Privacy({ props }) {
     }
   `);
 
-  const sources = [recruiterComputer.cloudinary.fluid];
+  const sources = [
+    recruiterComputerSm.cloudinary.fluid,
+    {
+      ...recruiterComputerMd.cloudinary.fluid,
+      media: `(min-width: 451px)`,
+    },
+    {
+      ...recruiterComputerLg.cloudinary.fluid,
+      media: `(min-width: 1021px)`,
+    },
+  ];
 
   return <Views.Privacy sources={sources} privacy={privacy} />;
 }
