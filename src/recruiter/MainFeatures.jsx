@@ -28,5 +28,10 @@ export function MainFeatures({ ...props }) {
     }
   `);
   const source = recruitermockupmainfeatures.cloudinary.fluid;
-  return <Views.MainFeatures source={source} mainFeatures={mainFeatures} />;
+  return (
+    <Views.MainFeatures
+      source={source}
+      mainFeatures={mainFeatures}
+    ></Views.MainFeatures>
+  );
 }

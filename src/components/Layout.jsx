@@ -5,6 +5,7 @@ import { NavigationBar } from "./NavigationBar";
 import { Footer } from "./Footer";
 
 import "@fontsource/open-sans/index.css";
+import "@fontsource/open-sans/300.css";
 import "@fontsource/open-sans/600.css";
 import "@fontsource/open-sans/700.css";
 import "@fontsource/poppins/index.css";

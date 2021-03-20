@@ -5,30 +5,17 @@ import { Button } from "../components/Button";
 
 // TODO: remove Bottom as it doesnt make any sense... we are not gonna show a pic but a custom <component className=""></component>
 // instead, pass a children prop and return the bottom
-export function Perks({ perks, sources, pictureLeft, pictureRight, picture }) {
+export function Perks({
+  perks,
+  sources,
+  pictureLeft,
+  pictureRight,
+  picture,
+  children,
+}) {
   return (
     <section className="pb-16 bg-gradient-to-bl from-purple-900 to-purple-brilliant flex flex-col relative z-0 pt-14 md:pt-20 lg:pt-32 gap-6 md:gap-12 lg:gap-20 xl:gap-28">
-      <div className="flex flex-col items-center default-padding-x lg:items-start lg:flex-row gap-12 lg:gap-24">
-        {perks.items.map(({ title, content }, index) => {
-          return (
-            <div
-              key={title}
-              className="flex flex-col items-center gap-2 md:gap-3 lg:gap-4 p-1 sm:w-1/2 lg:w-2/7"
-            >
-              {/* <div className="mb-w-12 md:w-14 mb-5 lg:mb-10">
-                <img src={icon} />
-              </div> */}
-              <div className="w-10 md:w-12 lg:w-14 mb-w-12 mb-5 lg:mb-10">
-                <Image fluid={sources[index]} />
-              </div>
-              <h3 className="text-center">{title}</h3>
-              <p className="text-center font-sans text-base text-white font-light">
-                {content}
-              </p>
-            </div>
-          );
-        })}
-      </div>
+      {children}
       <div className="flow-band skew-y-12 relative"></div>
       <Bottom
         pictureRight={pictureRight}

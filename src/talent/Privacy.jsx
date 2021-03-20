@@ -2,6 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 import { Views } from "../views";
+import { Button } from "../components/Button";
 
 export const privacy = {
   titleNormal: "On protège votre identité",
@@ -13,7 +14,7 @@ export const privacy = {
   callToAction: "2mn pour s'inscrire",
 };
 
-export function Privacy({ props }) {
+export function Privacy() {
   const {
     privacyTalentSm,
     privacyTalentMd,
@@ -57,5 +58,15 @@ export function Privacy({ props }) {
     },
   ];
 
-  return <Views.Privacy sources={sources} privacy={privacy} />;
+  return (
+    <Views.Privacy
+      sources={sources}
+      privacy={privacy}
+      Button={<Button label={privacy.callToAction} secondary />}
+    >
+      <p> {privacy.description1} </p>
+      <p className="font-bold"> {privacy.description2} </p>
+      <p> {privacy.description3} </p>
+    </Views.Privacy>
+  );
 }
