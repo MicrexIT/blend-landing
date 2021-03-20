@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "gatsby-image";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 
 export function MenuMobile({ closeMenu }) {
   const data = useStaticQuery(graphql`
@@ -31,9 +31,21 @@ export function MenuMobile({ closeMenu }) {
         <Image fluid={xIcon} />
       </div>
       <div className="flex flex-col gap-8">
-        <span className="sans font-bold text-lg">Talents</span>
-        <span className="sans font-bold text-lg">Entreprises</span>
-        <span className="sans font-bold text-lg">Nous Contacter</span>
+        <Link to="/">
+          <span className="cursor-pointer sans font-bold text-lg">Talents</span>
+        </Link>
+
+        <Link to="/entreprises">
+          <span className="cursor-pointer sans font-bold text-lg">
+            Entreprises
+          </span>
+        </Link>
+
+        <Link to="/contact">
+          <span className="cursor-pointer sans font-bold text-lg">
+            Nous Contacter
+          </span>
+        </Link>
       </div>
       <div className="flex flex-row justify-self-end items-center justify-between">
         <span className="serif font-bold cursor-pointer hover:text-purple-400 text-gray-500">

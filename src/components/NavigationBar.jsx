@@ -3,7 +3,7 @@ import { Logo } from "./Logo";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import { Menu } from "../components/Menu";
 
-export function NavigationBar({ ...props }) {
+export function NavigationBar() {
   const [headerVisible, setHeaderVisible] = useState({
     transition: "all 200ms ease-in",
   });
@@ -15,11 +15,12 @@ export function NavigationBar({ ...props }) {
       const newHeaderVisible = {
         visibility: isVisible ? "visible" : "hidden",
         transition: `all 200ms ${isVisible ? "ease-in" : "ease-out"}`,
-        transform: isVisible ? "none" : "translate(0, -100%)",
+        transform: isVisible ? "" : "translate(0, -100%)",
       };
 
-      if (JSON.stringify(newHeaderVisible) === JSON.stringify(headerVisible))
+      if (JSON.stringify(newHeaderVisible) === JSON.stringify(headerVisible)) {
         return;
+      }
 
       setHeaderVisible(newHeaderVisible);
     },

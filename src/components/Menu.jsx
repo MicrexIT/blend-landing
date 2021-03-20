@@ -32,10 +32,10 @@ export function Menu() {
           <Image fluid={burgerIcon} />
         </div>
       </div>
-      <div className="relative z-50 hidden md:flex flex-row items-center gap-4">
+      <div className="hidden md:flex flex-row items-center gap-4">
         <div className="flex border-r border-black flex-row items-center gap-4 px-4 font-sans">
           <Link to="/">
-            <span className=" hover:opacity-70 cursor-pointer font-bold text-black">
+            <span className="hover:opacity-70 cursor-pointer font-bold text-black">
               Talents
             </span>
           </Link>
@@ -45,11 +45,13 @@ export function Menu() {
               Entreprises
             </span>
           </Link>
-          <span className=" hover:opacity-70 cursor-pointer text-black">
-            Nous contacter
-          </span>
+          <Link to="/contact">
+            <span className=" hover:opacity-70 cursor-pointer text-black">
+              Nous contacter
+            </span>
+          </Link>
         </div>
-        <div className=" relative z-50 flex items-center gap-4">
+        <div className="flex items-center gap-4">
           <Button secondary small label="start" />
           <span className="serif font-semi-bold cursor-pointer hover:text-purple-400 text-gray-500">
             Log in

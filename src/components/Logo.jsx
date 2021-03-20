@@ -17,8 +17,10 @@ export function Logo() {
 
   const logoImg = data.logoImage.cloudinary.fluid;
   return (
-    <div className="relative z-50 w-21 md:w-24 lg:w-32">
-      <Image fluid={logoImg} />
+    <div className="cursor-pointer relative z-50 w-21 md:w-24 lg:w-32">
+      <Link to="/">
+        <Image fluid={logoImg} />
+      </Link>
     </div>
   );
 }

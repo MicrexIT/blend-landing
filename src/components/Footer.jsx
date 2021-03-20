@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "gatsby-image";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 
 // TODO add image
 export function Footer({ ...props }) {
@@ -34,9 +34,17 @@ export function Footer({ ...props }) {
             <Image fluid={logoFooter} />
           </div>
           <div className="flex flex-col lg:flex-row lg:items-center gap-3 md:gap-6 lg:gap-12 ">
-            <span>Talents</span>
-            <span>Entreprises</span>
-            <span>Nous Contacter</span>
+            <Link to="/">
+              <span>Talents</span>
+            </Link>
+
+            <Link to="/entreprises">
+              <span>Entreprises</span>
+            </Link>
+
+            <Link to="/contact">
+              <span>Nous Contacter</span>
+            </Link>
           </div>
         </div>
         <div className="w-10 mt-4 md:mt-0 cursor-pointer hover:opacity-70">
