@@ -32,8 +32,8 @@ export function Menu() {
           <Image fluid={burgerIcon} />
         </div>
       </div>
-      <div className="hidden md:flex flex-row items-center gap-4">
-        <div className="flex border-r border-black flex-row items-center gap-4 px-4 font-sans">
+      <div className="hidden md:flex flex-row items-center space-x-4">
+        <div className="flex border-r border-black flex-row items-center space-x-4 px-4 font-sans">
           <Link to="/">
             <span className="hover:opacity-70 cursor-pointer font-bold text-black">
               Talents
@@ -51,7 +51,7 @@ export function Menu() {
             </span>
           </Link>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center space-x-4">
           <Button secondary small label="start" />
           <span className="serif font-semi-bold cursor-pointer hover:text-purple-400 text-gray-500">
             Log in

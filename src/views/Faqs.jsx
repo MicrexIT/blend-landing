@@ -4,7 +4,7 @@ import { Button } from "../components/Button";
 
 export function Faqs({ faqs }) {
   return (
-    <section className="relative default-padding-x py-16 lg:py-7 flex flex-col md:items-start lg:items-center lg:flex-row lg:justify-between gap-16 xl:gap-32">
+    <section className="relative default-padding-x py-16 lg:py-7 flex flex-col md:items-start lg:items-center lg:flex-row lg:justify-between space-x-16 xl:space-x-32">
       <div
         style={{
           background:
@@ -12,7 +12,7 @@ export function Faqs({ faqs }) {
         }}
         className="absolute top-0 bottom-0 left-0 right-0 opacity-50"
       ></div>
-      <div className="relative z-30 flex flex-col gap-4 md:gap-5 lg:gap-6 lg:w-1/3">
+      <div className="relative z-30 flex flex-col space-x-4 md:space-x-5 lg:space-x-6 lg:w-1/3">
         <h2 className="text-black font-bold w-full">{faqs.titleBold}</h2>
         <p className="text-black">{faqs.description}</p>
 

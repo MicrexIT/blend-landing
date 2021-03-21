@@ -17,7 +17,7 @@ export function CheckTag({ content }) {
 
   const source = checkOkIcon.cloudinary.fluid;
   return (
-    <div className="shadow-xl bg-white rounded-lg flex flex-row items-center p-2 px-4 md:px-7 md:py-3 md:pl-10  gap-5 md:gap-6 w-48 md:w-72">
+    <div className="shadow-xl bg-white rounded-lg flex flex-row items-center p-2 px-4 md:px-7 md:py-3 md:pl-10  space-x-5 md:space-x-6 w-48 md:w-72">
       <div className="w-7 md:w-10">
         <Image fluid={source} />
       </div>

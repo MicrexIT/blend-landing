@@ -33,7 +33,7 @@ export function MainFeatures({ ...props }) {
   const source = recruitermockupmainfeatures.cloudinary.fluid;
   return (
     <Views.MainFeatures source={source} mainFeatures={mainFeatures}>
-      <div className=" flex flex-col items-center justify-center z-20 gap-6">
+      <div className=" flex flex-col items-center justify-center z-20 space-x-6">
         <div className=" w-363 md:w-550 lg:w-xl relative">
           <Image fluid={source} className="z-30 mb-4 md:mb-8 lg:mb-2" />
         </div>

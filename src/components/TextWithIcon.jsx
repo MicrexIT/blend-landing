@@ -16,7 +16,7 @@ export function TextWithIcon({ content, bold }) {
   `);
   const source = checkOkIcon.cloudinary.fluid;
   return (
-    <div className="my-3 flex flex-row items-center gap-3">
+    <div className="my-3 flex flex-row items-center space-x-3">
       <div className="w-3">
         <Image fluid={source} />
       </div>

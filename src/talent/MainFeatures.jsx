@@ -32,7 +32,7 @@ export function MainFeatures({ ...props }) {
   const source = talentPhoneMockupFeatures.cloudinary.fluid;
   return (
     <Views.MainFeatures source={source} mainFeatures={mainFeatures}>
-      <div className=" flex flex-col items-center justify-end z-20 lg:w-2/3 gap-5">
+      <div className=" flex flex-col items-center justify-end z-20 lg:w-2/3 space-x-5">
         <div className="w-72 md:w-96 lg:w-400 xl:w-500 relative">
           <Image fluid={source} className="z-30 mb-4 md:mb-8 lg:mb-2" />
           <CheckTagFixed
@@ -53,7 +53,7 @@ export function MainFeatures({ ...props }) {
             }
           />
         </div>
-        <div className="w-full flex flex-col items-center lg:hidden gap-2.5">
+        <div className="w-full flex flex-col items-center lg:hidden space-x-2.5">
           <CheckTag
             className="lg:hidden "
             content={

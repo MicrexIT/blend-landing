@@ -31,14 +31,8 @@ export function TalentPerksIllustrations({ perks }) {
   const jobOfferLeftSource = talentJobOffersCut.cloudinary.fluid;
   const jobOfferRightSource = talentJobOffersPhonePerk.cloudinary.fluid;
   return (
-    <div
-      // style={{ minHeight: "535px" }}
-      // className="relative z-10 flex flex-row flex-wrap w-screen items-center justify-center pr-8"
-      className="relative z-10 w-screen grid grid-cols-3 grid-rows-title-with-split lg:grid-rows-1 items-center md:gap-16 "
-      // style={{ minHeight: "700px" }}
-    >
-      {/* <div className="row-start-1 col-span-2 w-full lg:w-1/4 lg:order-2 flex flex-col items-center"> */}
-      <div className=" self-center row-start-1 col-span-3 lg:row-span-1 lg:col-span-1 w-full flex flex-col items-center justify-center gap-4">
+    <div className="relative z-10 w-screen grid grid-cols-3 grid-rows-title-with-split lg:grid-rows-1 items-center md:gap-16 ">
+      <div className=" self-center row-start-1 col-span-3 lg:row-span-1 lg:col-span-1 w-full flex flex-col items-center justify-center space-x-4">
         <h2 className="text-white font-medium">{perks.titleNormal}</h2>
         <h2 className="text-white font-bold mb-10 md:mb-12 lg:mb-16 xl:mb-20">
           {perks.titleBold}

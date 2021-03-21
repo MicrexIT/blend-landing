@@ -12,7 +12,7 @@ export function Tags({ tags, sources }) {
       className="relative py-12 md:py-20 lg:py-28 default-padding-x flex flex-col items-center text-center "
     >
       <BackgroundGrandientPurple />
-      <div className="relative z-20 mb-10 md:mb-20  flex flex-col items-center gap-5">
+      <div className="relative z-20 mb-10 md:mb-20  flex flex-col items-center space-x-5">
         <h2 className="text-white font-bold">{tags.titleBold}</h2>
         <p className="text-white font-sans text-xs md:text-lg mx-auto">
           {tags.description}

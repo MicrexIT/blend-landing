@@ -39,7 +39,7 @@ const perks = {
       title: "Votre privacy sous controle",
       content: (
         <>
-          <span className="font-bold">Postulez sereinement.{" "}</span> Votre
+          <span className="font-bold">Postulez sereinement. </span> Votre
           employeur n’est pas en mesure de voir votre profil sur Blend.
         </>
       ),
@@ -108,12 +108,12 @@ export function Perks() {
   const jobOfferRightSource = talentJobOffersPhonePerk.cloudinary.fluid;
   return (
     <Views.Perks Bottom={<TalentPerksIllustrations perks={perks} />}>
-      <div className="flex flex-col items-center default-padding-x lg:items-start lg:flex-row gap-12 lg:gap-24">
+      <div className="flex flex-col items-center default-padding-x lg:items-start lg:flex-row space-x-12 lg:space-x-24">
         {perks.items.map(({ title, content }, index) => {
           return (
             <div
               key={title}
-              className="flex flex-col items-center gap-2 md:gap-3 lg:gap-4 p-1 sm:w-1/2 lg:w-2/7"
+              className="flex flex-col items-center space-x-2 md:space-x-3 lg:space-x-4 p-1 sm:w-1/2 lg:w-2/7"
             >
               <div className="w-10 md:w-12 lg:w-14 mb-w-12 mb-5 lg:mb-10">
                 <Image fluid={sources[index]} />
