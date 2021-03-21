@@ -3,33 +3,33 @@ import { useStaticQuery, graphql } from "gatsby";
 import { Views } from "../views";
 
 const tags = {
-  titleBold: "Tout les talents dont vous avez besoin.",
-  description: "Pour booster votre croissance.",
+  titleBold: "Tout les talents dont vous avez besoin",
+  description: "pour booster votre croissance.",
   grids: [
     {
-      title: "Les rôles",
+      title: "Secteurs",
       items: [
-        "Engineering",
-        "Operations",
+        "Ingénierie",
+        "Opérations",
         "Data",
         "Sales",
         "Marketing",
         "Product",
         "Design",
-        "IT Support",
-        "Compliance",
-        "Human Resources",
+        "Support IT",
+        "Juridique et conformité",
+        "RH & People",
       ],
     },
     {
-      title: "Les niveaux",
+      title: "Expérience",
       items: [
         "Senior",
         "Junior",
-        "Graduate",
-        "Intern",
-        "Head of",
-        "Director",
+        "Jeune diplômé",
+        "Stage",
+        "Manager",
+        "Directeur",
         "VP",
       ],
     },

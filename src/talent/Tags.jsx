@@ -3,34 +3,34 @@ import { useStaticQuery, graphql } from "gatsby";
 import { Views } from "../views";
 
 const tags = {
-  titleBold: "Vous etes tous les bienvenues",
+  titleBold: "Vous êtes tou.te.s les bienvenu.es",
   description:
-    "Sur Blend, tous les talents de tous les niveaux peuvent trouver leur job idéal",
+    "Sur Blend, les talents de tous niveaux peuvent trouver leur job de rêve.",
   grids: [
     {
-      title: "Les rôles",
+      title: "Secteurs",
       items: [
-        "Engineering",
-        "Operations",
+        "Ingénierie",
+        "Opérations",
         "Data",
         "Sales",
         "Marketing",
         "Product",
         "Design",
-        "IT Support",
-        "Compliance",
-        "Human Resources",
+        "Support IT",
+        "Juridique et conformité",
+        "RH & People",
       ],
     },
     {
-      title: "Les niveaux",
+      title: "Expérience",
       items: [
         "Senior",
         "Junior",
-        "Graduate",
-        "Intern",
-        "Head of",
-        "Director",
+        "Jeune diplômé",
+        "Stage",
+        "Manager",
+        "Directeur",
         "VP",
       ],
     },

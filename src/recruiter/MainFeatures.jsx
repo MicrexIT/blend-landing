@@ -5,14 +5,14 @@ import Image from "gatsby-image";
 import { Views } from "../views";
 
 const mainFeatures = {
-  titleNormal: "Recevez uniquement des ",
-  titleBold: "candidatures qualifiées.",
+  titleNormal: "Recevez des profils qualifiés",
+  titleBold: "au-delà du CV",
   features: [
-    "Matching du culture fit",
-    "Matching des competences & experiences",
-    "Matching des préfèrences de carrière",
+    "Matching de la culture d’entreprise souhaitée",
+    "Matching des compétences & expériences",
+    "Matching des ambitions de carrière",
   ],
-  callToAction: "Obtenez votre accès gratuit",
+  callToAction: "Essai 30 jours gratuits",
 };
 
 // TODO: change picture
@@ -33,8 +33,8 @@ export function MainFeatures({ ...props }) {
   const source = recruitermockupmainfeatures.cloudinary.fluid;
   return (
     <Views.MainFeatures source={source} mainFeatures={mainFeatures}>
-      <div className=" flex flex-col items-center justify-center z-20 gap-5">
-        <div className="w-72 md:w-96 lg:w-400 xl:w-500 relative">
+      <div className=" flex flex-col items-center justify-center z-20 gap-6">
+        <div className=" w-363 md:w-550 lg:w-xl relative">
           <Image fluid={source} className="z-30 mb-4 md:mb-8 lg:mb-2" />
         </div>
       </div>

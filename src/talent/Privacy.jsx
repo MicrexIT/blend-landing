@@ -5,13 +5,13 @@ import { Views } from "../views";
 import { Button } from "../components/Button";
 
 export const privacy = {
-  titleNormal: "On protège votre identité",
-  titleBold: "On limite les biais",
-  description1: "Nous prenons en compte et montrons dans la base de talents",
-  description2: "uniquement les données utile à votre recherche d’emploi",
-  description3:
-    "Votre nom, sexe, religion, coupe de cheveux n’en font pas parti",
-  callToAction: "2mn pour s'inscrire",
+  titleNormal: "Matching affinitaire, oui.",
+  titleBold: "Discrimination à l’embauche, non.",
+  description1:
+    "Blend transmet aux entreprises uniquement les informations utiles au recrutement.",
+  description2:
+    "Votre âge, votre sexe ou votre couleur de peau n’en font pas parti.",
+  callToAction: "Lancez-vous!",
 };
 
 export function Privacy() {
@@ -66,7 +66,6 @@ export function Privacy() {
     >
       <p> {privacy.description1} </p>
       <p className="font-bold"> {privacy.description2} </p>
-      <p> {privacy.description3} </p>
     </Views.Privacy>
   );
 }

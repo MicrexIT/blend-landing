@@ -6,10 +6,8 @@ import { RecruiterHomePicture } from "../components/RecruiterHomePicure";
 const bannerText = {
   title: "Des profils qualifiés",
   titleBold: "Qui reflètent vos valeurs",
-  messages: [
-    "Remplissez votre pipeline avec des candidats qualifiés. Pas n’importe quel candidat.",
-  ],
-  callToAction: "Commencez maintenant",
+  messages: ["Trouvez le bon candidat en un rien de temps"],
+  callToAction: "Essai 30 jours gratuits",
 };
 
 export function Home() {

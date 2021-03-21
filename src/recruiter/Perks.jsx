@@ -13,16 +13,32 @@ const perks = {
   illustration2: "/perks_iphone.png",
   items: [
     {
-      title: "Notre matching est",
-      content: "100% bias free",
+      content: (
+        <>
+          <span className="font-bold">
+            Identifiez les candidats sur la base de critères objectifs{" "}
+          </span>
+          grâce à notre matching sans préjugés.
+        </>
+      ),
     },
     {
-      title: "Réduisez les biais grâce au ",
-      content: "blend hiring",
+      content: (
+        <>
+          <span className="font-bold">
+            Recrutez vos prochains employés pour leur talent{" "}
+          </span>
+          et uniquement leur talent.
+        </>
+      ),
     },
     {
-      title: "Analyse approfondie qui",
-      content: "va au-delà du CV",
+      content: (
+        <>
+          Partagez vos valeurs et vos engagements pour{" "}
+          <span className="font-bold">valoriser votre marque-employeur.</span>
+        </>
+      ),
     },
   ],
 };
@@ -32,9 +48,6 @@ export function Perks() {
     recruiterCVIcon,
     recruiterAnonymousIcon,
     recruiterBiasFreeIcon,
-    recruiterCreditsIcon,
-    recruiterCheckBusinessIcon,
-    recruiterBoostIcon,
   } = useStaticQuery(graphql`
     query RecruiterPerksIcons {
       recruiterCVIcon: file(name: { eq: "Icon_CV" }) {
@@ -60,30 +73,6 @@ export function Perks() {
           }
         }
       }
-
-      recruiterCreditsIcon: file(name: { eq: "Icon_Credits" }) {
-        cloudinary: childCloudinaryAsset {
-          fluid {
-            ...CloudinaryAssetFluid
-          }
-        }
-      }
-
-      recruiterCheckBusinessIcon: file(name: { eq: "Check_Business" }) {
-        cloudinary: childCloudinaryAsset {
-          fluid {
-            ...CloudinaryAssetFluid
-          }
-        }
-      }
-
-      recruiterBoostIcon: file(name: { eq: "Icon_Boost" }) {
-        cloudinary: childCloudinaryAsset {
-          fluid {
-            ...CloudinaryAssetFluid
-          }
-        }
-      }
     }
   `);
   const sources = [
@@ -91,7 +80,6 @@ export function Perks() {
     recruiterAnonymousIcon.cloudinary.fluid,
     recruiterBiasFreeIcon.cloudinary.fluid,
   ];
-  const icon = recruiterBoostIcon.cloudinary.fluid;
   return (
     <Views.Perks
       recruiter
@@ -111,12 +99,9 @@ export function Perks() {
               <div className="w-10 md:w-12 lg:w-14 mb-w-12 mb-5 lg:mb-10">
                 <Image fluid={sources[index]} />
               </div>
-              <p className="text-center font-sans text-base leading-4 text-white font-light">
-                {title}
-              </p>
-              <h3 className="text-center font-bold leading-5 md:leading-6 lg:leading-7">
+              <p className="text-center font-sans text-base text-white font-light">
                 {content}
-              </h3>
+              </p>
             </div>
           );
         })}

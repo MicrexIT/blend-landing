@@ -14,6 +14,9 @@ export function Showcase() {
     recruiterCard3,
     sheresLeft,
     sheresRight,
+    recruiterOfferSm,
+    recruiterOfferMd,
+    recruiterOfferLg,
   } = useStaticQuery(graphql`
     query RecruiterShowcaseIllustrations {
       recruiterCard1: file(name: { eq: "recruiters-candidatures-card-1" }) {
@@ -55,6 +58,29 @@ export function Showcase() {
           }
         }
       }
+
+      recruiterOfferSm: file(name: { eq: "offres-entreprises-s" }) {
+        cloudinary: childCloudinaryAsset {
+          fluid {
+            ...CloudinaryAssetFluid
+          }
+        }
+      }
+      recruiterOfferMd: file(name: { eq: "offres-entreprises-m" }) {
+        cloudinary: childCloudinaryAsset {
+          fluid {
+            ...CloudinaryAssetFluid
+          }
+        }
+      }
+
+      recruiterOfferLg: file(name: { eq: "offres-entreprise-l" }) {
+        cloudinary: childCloudinaryAsset {
+          fluid {
+            ...CloudinaryAssetFluid
+          }
+        }
+      }
     }
   `);
   const sources = [
@@ -63,23 +89,27 @@ export function Showcase() {
     recruiterCard3.cloudinary.fluid,
   ];
 
+  const offerSources = [
+    recruiterOfferSm.cloudinary.fluid,
+    {
+      ...recruiterOfferMd.cloudinary.fluid,
+      media: `(min-width: 491px)`,
+    },
+    {
+      ...recruiterOfferLg.cloudinary.fluid,
+      media: `(min-width: 1021px)`,
+    },
+  ];
+
   return (
     <section className="showcase z-10">
       <div className="z-0 pointer-events-none absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-white to-gray-400 opacity-50" />
-      <div className="relative z-10 h-screen flex flex-col items-center gap-6 md:gap-12 lg:gap-16">
+      <div className="relative z-10 flex flex-col items-center gap-6 md:gap-12 lg:gap-16">
         <h2>
           {showcase.titleNormal} <br />
           <span>{showcase.titleBold}</span>
         </h2>
-        <div className="relative p-8 flex items-center justify-center">
-          <div className="absolute z-10 left-0 top-0 w-44">
-            <Image fluid={sheresLeft} />
-          </div>
-          <div className="absolute z-10 right-0 bottom-0 w-44">
-            <Image fluid={sheresRight} />
-          </div>
-          <ShowcaseEmploymentOffer sources={sources} />
-        </div>
+        <ShowcaseEmploymentOffer sources={offerSources} />
       </div>
     </section>
   );
@@ -87,22 +117,8 @@ export function Showcase() {
 
 function ShowcaseEmploymentOffer({ sources }) {
   return (
-    <div className="flex flex-col gap-1">
-      <h3></h3>
-
-    <div className="flex flex-col md:flex-row items-center justify-items-center">
-      <div className="w-44 md:w-43 lg:w-60">
-        <Image fluid={sources[0]} />
-      </div>
-
-      <div className="w-44 md:w-43 lg:w-60">
-        <Image fluid={sources[1]} />
-      </div>
-
-      <div className="w-44 md:w-43 lg:w-60">
-        <Image fluid={sources[2]} />
-      </div>
-    </div>
+    <div className="relative z-30 w-full">
+      <Image fluid={sources} />
     </div>
   );
 }

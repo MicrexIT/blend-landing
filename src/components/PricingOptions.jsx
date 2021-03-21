@@ -57,7 +57,7 @@ export function PricingOptions({ callToAction }) {
       // style={{ minHeight: "700px" }}
     >
       <h2 className="relative z-20 text-white font-medium text-center">
-        Recrutement augmenté.
+        Recrutement performant.
         <span className="text-white font-bold">Pricing transparent.</span>
       </h2>
       <div className="relative z-20 grid grid-cols-table grid-rows-table items-center w-full bg-white rounded-lg p-4 py-9 md:p-6 lg:p-8 gap-6 md:gap-8">
@@ -226,7 +226,7 @@ function PricingTableCell({ centered, children }) {
 function SpecialOfferBox() {
   return (
     <div className="absolute p-4 md:p-6 shadow-lg rounded-9 -top-2 -left-1 md:-top-3 md:-left-4 w-24 md:w-48  bg-gray-500">
-      <p class="text-center font-sans font-bold text-xs leading-4 md:text-sm md:leading-18 text-gradient bg-gradient-to-l from-orange-400 to-purple-400">
+      <p className="text-center font-sans font-bold text-xs leading-4 md:text-sm md:leading-18 text-gradient bg-gradient-to-l from-orange-400 to-purple-400">
         12 mois -30% off
       </p>
     </div>

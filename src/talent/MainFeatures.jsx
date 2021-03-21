@@ -7,14 +7,14 @@ import { CheckTag } from "../components/CheckTag";
 import { CheckTagFixed } from "../components/CheckTagFixed";
 
 const mainFeatures = {
-  titleNormal: "Plus besoin de",
-  titleBold: "scroller des heures",
+  titleNormal: "Ne passez plus des",
+  titleBold: "heures à postuler",
   features: [
-    "Donnez vos critères",
-    "On vous fait un séléction de jobs vérifiés",
-    "Recevez des invitations de recruteurs",
+    "Choisissez vos critères et la culture d’entreprise souhaités",
+    "Blend séléctionne pour vous les meilleures opportunités",
+    "Postulez en 1 clic",
   ],
-  callToAction: "2mn pour s'inscrire",
+  callToAction: "Lancez-vous!",
 };
 
 export function MainFeatures({ ...props }) {

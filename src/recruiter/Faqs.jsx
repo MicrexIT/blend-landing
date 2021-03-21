@@ -9,17 +9,17 @@ export function Faqs() {
     callToAction: "Contactez-nous",
     items: [
       {
-        title: "C’EST QUOI LE BOOST VISIBILITÉ?",
+        title: "QU’EST-CE QUE LE BOOST VISIBILITÉ ?",
         content:
-          "Nous montrons votre offre en première parmi les match disponibles au candidat.",
+          "Nous montrons votre offre en premier parmi les matchs visibles par le candidat.",
       },
       {
-        title: "C’EST QUOI LE CRÉDITS DE CONTACT?",
+        title: "QU’EST-CE QUE LES CRÉDITS DE SOURCING ?",
         content:
-          "Vous pouvez utiliser les crédits pour envoyer des demandes aux talents qualifiés dans la base de données. Dès que le talent accepte votre demande, ses informations de contact seront visibles.",
+          "Vous pouvez utiliser les crédits de sourcing pour rendre visibles les informations d’un.e candidat.e.",
       },
       {
-        title: "EST IL POSSIBLE D’INTEGRER BLEND À MON ATS?",
+        title: "EST-IL POSSIBLE D’INTÉGRER BLEND À MON ATS?",
         content:
           "Pas pour l'instant mais nous travaillons pour intégrer Blend aux principaux ATS. Si vous souhaitez savoir si votre ATS est sur notre roadmap n'hésitez pas à nous contacter.",
       },

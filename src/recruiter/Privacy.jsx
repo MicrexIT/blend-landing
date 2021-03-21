@@ -6,12 +6,12 @@ import { TextWithIcon } from "../components/TextWithIcon";
 import { Button } from "../components/Button";
 
 export const privacy = {
-  titleNormal: "Ne passez plus ",
-  titleBold: "des heures à sourcer",
-  description1: "Identification automatique des candidats potentiels.",
-  description2: "Des profils candidat augmentées, pas juste de CV",
-  description3: "Partagez l’opportunité et prenez rendez-vous en 1 click.",
-  callToAction: "Commencez maintenant",
+  titleNormal: "Automatisez le sourcing",
+  titleBold: "de vos futurs talents",
+  description1: "Identification automatique de candidats potentiels",
+  description2: "Présentation de profils ultra-qualifiés",
+  description3: "Plannification d’entretien en 1 clic",
+  callToAction: "Essai 30 jours gratuits",
 };
 
 export function Privacy() {

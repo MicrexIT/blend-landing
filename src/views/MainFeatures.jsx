@@ -8,7 +8,7 @@ export function MainFeatures({ mainFeatures, children }) {
   return (
     <section className="main-features pb-12 pt-16 flex flex-col lg:flex-row lg:justify-between gap-8 md:gap-12 lg:gap-5">
       <GradientBand />
-      <div className="relative z-20 flex flex-col gap-5">
+      <div className="relative z-20 flex flex-col gap-5 mt-7">
         <div className="flex flex-col">
           <h2 className="text-black">{mainFeatures.titleNormal}</h2>
           <h2 className="text-black font-bold">{mainFeatures.titleBold}</h2>

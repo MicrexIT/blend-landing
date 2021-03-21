@@ -8,24 +8,41 @@ import { TalentPerksIllustrations } from "../components/TalentPerksIllustrations
 const perks = {
   titleNormal: "Rejoignez la",
   titleBold: "communauté",
-  callToAction: "2mn pour s'inscrire",
+  callToAction: "Lancez-vous!",
   illustration1: "/perks_offers.png",
   illustration2: "/perks_iphone.png",
   items: [
     {
-      title: "Matching sans préjugés",
-      content:
-        "Notre algoritme prend en compte uniquement les données utiles à votre recherche d’emploi",
+      title: "Matching neutre",
+      content: (
+        <>
+          Seules les données{" "}
+          <span className="font-bold">
+            utiles à votre recherche d’emploi sont transmises aux entreprises.
+          </span>
+          ,
+        </>
+      ),
     },
     {
-      title: "Anonymisation de votre profil",
-      content:
-        "Rendez vous visible auprès de sociétés qui utilisent Blend, en sachant que votre identité est protégée et que vous ne serez pas rejeté pour les mauvaises raisons. Nous excluons les meme informations que dans notre matching",
+      title: "Profils sans préjugés",
+      content: (
+        <>
+          Restez visibles auprès des entreprises{" "}
+          <span className="font-bold">
+            sans craintes de discrimination à l’embauche.
+          </span>
+        </>
+      ),
     },
     {
       title: "Votre privacy sous controle",
-      content:
-        "Les recruteurs peuvent voir votre nom et vos coordonnées seulement si vous acceptez leur demande. Vos données vous appartiennent, pourquoi seraient-elle être en libre service et votre recherche d’emploi visible à tous?",
+      content: (
+        <>
+          <span className="font-bold">Postulez sereinement.{" "}</span> Votre
+          employeur n’est pas en mesure de voir votre profil sur Blend.
+        </>
+      ),
     },
   ],
 };

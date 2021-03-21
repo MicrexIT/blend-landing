@@ -4,17 +4,17 @@ import { useStaticQuery, graphql } from "gatsby";
 import { Views } from "../views";
 
 const showcase = {
-  titleNormal: "que des jobs verifies dans la",
-  titleBold: "tech francaise et internationale",
+  titleNormal: "Des jobs sélectionnés pour vous dans des",
+  titleBold: "entreprises à forte croissance.",
   illustrations: [
     {
-      caption: "DES STARTUPS QUI DECOLLENT",
+      caption: "DES START-UPS QUI DECOLLENT",
     },
     {
-      caption: "DES SCALES UPS",
+      caption: "DES SCALES-UPS",
     },
     {
-      caption: "DES GEANTS DE LA TECH",
+      caption: "DES GÉANTS DE LA TECH",
     },
   ],
 };

@@ -5,10 +5,10 @@ import { Views } from "../views";
 
 const bannerText = {
   title: "Trouvez le job",
-  titleBold: "Qui vous correspond",
+  titleBold: "qui vous correspond",
   messages: [
-    "Vous êtes plus que juste un CV. Vous méritez mieux q’une jungle.",
-    "Notre mission est de trouver pour vous les meilleures opportunités.",
+    "Blend trouve pour vous les",
+    "meilleures opportunités de carrière.",
   ],
   callToAction: "2mn pour s'inscrire",
 };
@@ -56,5 +56,9 @@ export function Home() {
       media: `(min-width: 921px)`,
     },
   ];
-  return <Views.Home sources={sources} bannerText={bannerText} ><TalentHomeIphone/></Views.Home> ;
+  return (
+    <Views.Home sources={sources} bannerText={bannerText}>
+      <TalentHomeIphone />
+    </Views.Home>
+  );
 }
