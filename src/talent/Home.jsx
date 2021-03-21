@@ -61,10 +61,12 @@ export function Home() {
       sources={sources}
       bannerText={bannerText}
       messages={
-        <p className="text-white sm:text-sm md:text-base lg:text-lg w-367 md:w-500 lg:w-550">
-          {bannerText.messages[0]}{" "}
-          <span className="font-bold">{bannerText.messages[1]} </span>
-        </p>
+        <div>
+          <p className="text-white sm:text-sm md:text-base lg:text-lg w-367 md:w-500 lg:w-550">
+            {bannerText.messages[0]}{" "}
+            <span className="font-bold">{bannerText.messages[1]} </span>
+          </p>
+        </div>
       }
     >
       <TalentHomeIphone />

@@ -27,13 +27,13 @@ export function Footer({ ...props }) {
   const linkedinIcon = data.linkedinIcon.cloudinary.fluid;
 
   return (
-    <footer className="footer flex flex-col p-4 pt-12 md:p-6 justify-between space-x-12 md:space-x-16">
+    <footer className="footer flex flex-col p-4 pt-12 md:p-6 justify-between space-y-12 md:space-y-16">
       <div className="flex flex-col md:flex-row md:justify-between ">
-        <div className="flex flex-col lg:flex-row lg:items-center space-x-8 md:space-x-11 lg:space-x-26">
+        <div className="flex flex-col lg:flex-row lg:items-center space-y-8 md:space-y-0 md:space-y-11 lg:space-y-0 lg:space-x-12">
           <div className="link w-28 h-6 relative">
             <Image fluid={logoFooter} />
           </div>
-          <div className="text-left flex flex-col items-start lg:flex-row lg:items-center space-x-3 md:space-x-6 lg:space-x-12 ">
+          <div className="text-left flex flex-col items-start lg:flex-row lg:items-center space-y-3 md:space-y-6 lg:space-y-0 lg:space-x-8 ">
             <Link to="/">
               <p>Talents</p>
             </Link>

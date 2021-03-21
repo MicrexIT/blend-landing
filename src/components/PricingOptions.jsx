@@ -53,14 +53,14 @@ export function PricingOptions({ callToAction }) {
     <div
       // style={{ minHeight: "535px" }}
       // className="relative z-10 flex flex-row flex-wrap w-screen items-center justify-center pr-8"
-      className="relative z-10 flex flex-col items-center justify-center p-2 md:px-9 lg:px-28 xl:px-32 space-x-20"
+      className="relative z-10 flex flex-col items-center justify-center p-2 md:px-9 lg:px-28 xl:px-32 space-y-20"
       // style={{ minHeight: "700px" }}
     >
       <h2 className="relative z-20 text-white font-medium text-center">
         Recrutement performant.
         <span className="text-white font-bold">Pricing transparent.</span>
       </h2>
-      <div className="relative z-20 grid grid-cols-table grid-rows-table items-center w-full bg-white rounded-lg p-3 py-6 md:p-6 lg:p-8 space-x-6 md:space-x-8">
+      <div className="relative z-20 grid grid-cols-table grid-rows-table items-center w-full bg-white rounded-lg p-3 py-6 md:p-6 lg:p-8 gap-6 md:gap-8">
         <SpecialOfferBox />
         <PricingTableHeader />
 
@@ -162,11 +162,11 @@ function PricingTitleCell({ content }) {
 
 function PricingTitleIconCell({ content, subContent, icon }) {
   return (
-    <div className="flex flex-shrink-0 flex-row items-start space-x-0.5 md:space-x-2 lg:space-x-3">
+    <div className="flex flex-shrink-0 flex-row items-start space-x-1 md:space-x-2 lg:space-x-3">
       <div className="w-6 md:w-6 lg:w-7">
         <Image fluid={icon} />
       </div>
-      <div className="flex flex-col space-x-2 md:space-x-3">
+      <div className="flex flex-col space-y-2 md:space-y-3">
         <p className="text-purple-800 font-sans font-bold leading-4 text-xs md:text-lg md:leading-18">
           {content}
         </p>

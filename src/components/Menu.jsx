@@ -51,7 +51,7 @@ export function Menu() {
             </span>
           </Link>
         </div>
-        <div className="flex items-center space-x-4">
+        <div className="flex flex-row items-center space-x-4">
           <Button secondary small label="start" />
           <span className="serif font-semi-bold cursor-pointer hover:text-purple-400 text-gray-500">
             Log in

@@ -20,7 +20,7 @@ export function MenuMobile({ closeMenu }) {
     <div
       className="
   fixed z-20 top-0 bottom-0 right-0 left-0
-  flex flex-col justify-between space-x-4 p-4 pb-8
+  flex flex-col justify-between space-y-4 p-4 pb-8
   bg-white overscroll-none overflow-hidden
   "
       style={{
@@ -30,7 +30,7 @@ export function MenuMobile({ closeMenu }) {
       <div className="cursor-pointer w-3" onClick={closeMenu}>
         <Image fluid={xIcon} />
       </div>
-      <div className="text-left items-start flex flex-col space-x-8">
+      <div className="text-left items-start flex flex-col space-y-8">
         <Link to="/">
           <p className="cursor-pointer sans font-bold text-lg">Talents</p>
         </Link>

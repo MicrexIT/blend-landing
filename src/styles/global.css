@@ -141,7 +141,7 @@
     @apply min-h-screen bg-bottom;
     @apply p-2 md:pb-4;
     @apply px-4 md:px-6 lg:px-16;
-    @apply flex flex-col md:flex-row justify-between space-x-1 md:space-x-5 lg:space-x-6;
+    @apply flex flex-col md:flex-row justify-between py-1 md:py-5 lg:py-6;
   }
 
   .home.recruiter {
@@ -152,12 +152,11 @@
 
   .home h1,
   .home p {
-    @apply py-1;
     @apply text-white;
   }
 
   .home .message {
-    @apply flex flex-col space-x-1 md:space-x-5 lg:space-x-6;
+    @apply flex flex-col space-y-1 md:space-y-5 lg:space-y-6;
     @apply mb-7 mt-14 md:mt-20 lg:mt-40;
   }
 
@@ -166,11 +165,11 @@
   }
 
   .home .message p:last-of-type {
-    @apply mb-10 lg:mb-16;
+    @apply mb-5 md:mb-6 lg:mb-8;
   }
 
   .showcase {
-    @apply flex flex-col items-center justify-center space-x-12 md:space-x-16 xl:space-x-21;
+    @apply flex flex-col items-center justify-center space-y-12 md:space-y-16 xl:space-y-21;
     @apply pb-42 md:pb-48 lg:pb-60;
     @apply pt-10 px-4 md:pt-20 lg:pt-32;
     @apply relative z-10;
@@ -183,12 +182,12 @@
   .showcase .illustrations {
     @apply w-full flex flex-col md:flex-row items-center justify-center md:px-12;
     @apply md:items-center md:justify-between xl:justify-center;
-    @apply space-x-10 xl:space-x-20;
+    @apply space-y-10 md:space-y-0 md:space-x-10 xl:space-x-20;
   }
 
   .illustration {
     @apply md:w-1/3;
-    @apply flex flex-col items-center justify-center space-x-4 md:space-x-7 lg:space-x-8 xl:space-x-9;
+    @apply flex flex-col items-center justify-center space-y-4 md:space-y-7 lg:space-y-8 xl:space-y-9;
   }
 
   .illustration .caption {

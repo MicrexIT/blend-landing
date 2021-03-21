@@ -6,14 +6,14 @@ import { Button } from "../components/Button";
 
 export function MainFeatures({ mainFeatures, children }) {
   return (
-    <section className="main-features pb-12 pt-16 flex flex-col lg:flex-row lg:justify-between space-x-8 md:space-x-12 lg:space-x-5">
+    <section className="main-features pb-12 pt-16 flex flex-col lg:flex-row lg:justify-between space-y-8 md:space-y-12 lg:space-y-0 lg:space-x-5">
       <GradientBand />
-      <div className="relative z-20 flex flex-col space-x-5 mt-7">
+      <div className="relative z-20 flex flex-col space-y-5 mt-7">
         <div className="flex flex-col">
           <h2 className="text-black">{mainFeatures.titleNormal}</h2>
           <h2 className="text-black font-bold">{mainFeatures.titleBold}</h2>
         </div>
-        <div className="flex flex-col space-x-2.5">
+        <div className="flex flex-col space-y-2.5">
           {mainFeatures.features.map((f) => (
             <FeatureSentence key={f} feature={f} />
           ))}
@@ -35,9 +35,9 @@ function GradientBand() {
 
 function FeatureSentence({ feature }) {
   return (
-    <div className="flex flex-row space-x-2.5 items-center lg:w-443 xl:w-auto">
+    <div className="flex flex-row space-x-3 items-center lg:w-443 xl:w-auto">
       <Dot />
-      {feature}
+      <div>{feature}</div>
     </div>
   );
 }
