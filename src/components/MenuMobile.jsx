@@ -30,27 +30,25 @@ export function MenuMobile({ closeMenu }) {
       <div className="cursor-pointer w-3" onClick={closeMenu}>
         <Image fluid={xIcon} />
       </div>
-      <div className="flex flex-col gap-8">
+      <div className="text-left items-start flex flex-col gap-8">
         <Link to="/">
-          <span className="cursor-pointer sans font-bold text-lg">Talents</span>
+          <p className="cursor-pointer sans font-bold text-lg">Talents</p>
         </Link>
 
         <Link to="/entreprises">
-          <span className="cursor-pointer sans font-bold text-lg">
-            Entreprises
-          </span>
+          <p className="cursor-pointer sans font-bold text-lg">Entreprises</p>
         </Link>
 
         <Link to="/contact">
-          <span className="cursor-pointer sans font-bold text-lg">
+          <p className="cursor-pointer sans font-bold text-lg">
             Nous Contacter
-          </span>
+          </p>
         </Link>
       </div>
       <div className="flex flex-row justify-self-end items-center justify-between">
-        <span className="serif font-bold cursor-pointer hover:text-purple-400 text-gray-500">
+        <p className="serif font-bold cursor-pointer hover:text-purple-400 text-gray-500">
           Log in
-        </span>
+        </p>
         <div></div>
       </div>
     </div>

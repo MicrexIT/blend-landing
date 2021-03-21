@@ -3,11 +3,12 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import Image from "gatsby-image";
 import { Views } from "../views";
+import { PricingOptions } from "../components/PricingOptions";
 
 const perks = {
   titleNormal: "Distinguez vous.",
   titleBold: "Une meilleure expérience, avec moins de biais.",
-  callToAction: "2mn pour s'inscrire",
+  callToAction: "Obtenez votre accès gratuit",
   illustration1: "/perks_offers.png",
   illustration2: "/perks_iphone.png",
   items: [
@@ -92,7 +93,14 @@ export function Perks() {
   ];
   const icon = recruiterBoostIcon.cloudinary.fluid;
   return (
-    <Views.Perks sources={sources} perks={perks} picture={icon}>
+    <Views.Perks
+      recruiter
+      Bottom={<PricingOptions callToAction={perks.callToAction} />}
+    >
+      <h2 className="relative z-20 text-white font-bold text-center">
+        {perks.titleNormal}
+        <span className="text-white font-medium">{perks.titleBold}</span>
+      </h2>
       <div className="flex flex-col items-center default-padding-x lg:items-start lg:flex-row gap-12 lg:gap-24">
         {perks.items.map(({ title, content }, index) => {
           return (

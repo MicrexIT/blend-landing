@@ -32,6 +32,12 @@ export function MainFeatures({ ...props }) {
     <Views.MainFeatures
       source={source}
       mainFeatures={mainFeatures}
-    ></Views.MainFeatures>
+    >
+       
+   <div className=" flex flex-col items-center justify-center z-20 gap-5">
+     <div >Offers...</div>
+     <div></div>
+     </div>
+    </Views.MainFeatures>
   );
 }

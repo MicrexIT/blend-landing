@@ -129,11 +129,14 @@ module.exports = {
       gridTemplateColumns: {
         split: "1fr 1fr",
         "three-split": "1/3 1/3 1/3",
+        "table-md": "minmax(200px, auto) auto auto minmax(200px, auto)",
+        "table": "minmax(1fr, 2fr) 1fr 1fr minmax(1fr, 2fr)",
       },
       gridTemplateRows: {
         "title-with-split": "250px minmax(200px, auto)",
         "title-with-split-md": "250px minmax(400px, 550px)",
         "title-with-split-lg": "minmax(550px, 1fr)",
+        "table": "minmax(2fr, 3fr) 1fr 1fr 1fr minmax(1fr, 2fr) minmax(1fr, 2fr) ",
       },
       spacing: {
         8: "2rem",

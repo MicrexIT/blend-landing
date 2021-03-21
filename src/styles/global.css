@@ -20,7 +20,7 @@
   }
   a:hover,
   button:hover {
-    @apply outline-none;
+    @apply outline-none opacity-50;
   }
 
   a:focus,
@@ -85,7 +85,7 @@
   }
 
   .btn.large {
-    @apply w-220 md:w-310;
+    @apply w-60 md:w-310;
   }
 
   .btn button {
@@ -131,6 +131,7 @@
     @apply text-black font-sans text-4xs md:text-3xs lg:text-2xs;
   }
 
+  .footer p,
   .footer span,
   .footer .link {
     @apply cursor-pointer hover:opacity-50;
@@ -209,6 +210,9 @@
   }
   .band1 {
     transform: skewY(12.76deg) translateY(-50px);
+  }
+
+  .pricing-grid {
   }
 }
 

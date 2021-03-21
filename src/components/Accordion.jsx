@@ -32,7 +32,7 @@ export function Accordion({ title, children }) {
   const rotate = isOpen ? "" : "rotate(270deg)";
 
   return (
-    <div className="relatiive z-30 py-7 text-purple-800 border-white border-b">
+    <div className="relative z-30 py-7 text-purple-800 border-white border-b">
       <div
         className=" flex flex-row justify-between items-center cursor-pointer"
         onClick={() => setOpen(!isOpen)}
@@ -42,9 +42,7 @@ export function Accordion({ title, children }) {
           <Image fluid={downSource} />
         </div>
       </div>
-      <div style={isOpen ? defaultStyle : collapsedStyle}>
-        <p className="py-4 text-purple-800">{children}</p>
-      </div>
+      <div style={isOpen ? defaultStyle : collapsedStyle}>{children}</div>
     </div>
   );
 }

@@ -25,22 +25,20 @@ export function Faqs({ faqs }) {
 
 function QuestionAndAnswer({ faqs }) {
   return (
-    <div
-      className="relative z-10 questionAndAnswer px-5 flex flex-col justify-center lg:w-2/3 "
-      style={{
-        boxShadow: " 0px 2px 8px rgba(204, 190, 223, 0.4), 0px 0px 1px #cab7e6",
-      }}
-    >
+    <div className="relative z-10 questionAndAnswer px-5 flex flex-col justify-center lg:w-2/3 ">
       <div
         className="absolute z-20 top-0 bottom-0 left-0 right-0 bg-white opacity-50"
         style={{
           boxShadow:
             " 0px 2px 8px rgba(204, 190, 223, 0.4), 0px 0px 1px #cab7e6",
+          borderRadius: "12px",
         }}
       ></div>
       {faqs.items.map(({ title, content }, index) => (
         <Accordion key={index} title={title}>
-          {content}
+          <p className="py-4 text-purple-800 font-light font-sans  text-3xs leading-4 tracking-1 md:tracking-normal md:text-sm md:leading-5">
+            {content}
+          </p>
         </Accordion>
       ))}
     </div>

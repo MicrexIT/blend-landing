@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import Image from "gatsby-image";
 import { Views } from "../views";
+import { TalentPerksIllustrations } from "../components/TalentPerksIllustrations";
 
 const perks = {
   titleNormal: "Rejoignez la",
@@ -89,12 +90,7 @@ export function Perks() {
   const jobOfferLeftSource = talentJobOffersCut.cloudinary.fluid;
   const jobOfferRightSource = talentJobOffersPhonePerk.cloudinary.fluid;
   return (
-    <Views.Perks
-      sources={sources}
-      perks={perks}
-      pictureLeft={jobOfferLeftSource}
-      pictureRight={jobOfferRightSource}
-    >
+    <Views.Perks Bottom={<TalentPerksIllustrations perks={perks} />}>
       <div className="flex flex-col items-center default-padding-x lg:items-start lg:flex-row gap-12 lg:gap-24">
         {perks.items.map(({ title, content }, index) => {
           return (
