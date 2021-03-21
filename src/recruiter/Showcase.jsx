@@ -9,56 +9,11 @@ const showcase = {
 
 export function Showcase() {
   const {
-    recruiterCard1,
-    recruiterCard2,
-    recruiterCard3,
-    sheresLeft,
-    sheresRight,
     recruiterOfferSm,
     recruiterOfferMd,
     recruiterOfferLg,
   } = useStaticQuery(graphql`
     query RecruiterShowcaseIllustrations {
-      recruiterCard1: file(name: { eq: "recruiters-candidatures-card-1" }) {
-        cloudinary: childCloudinaryAsset {
-          fluid {
-            ...CloudinaryAssetFluid
-          }
-        }
-      }
-
-      recruiterCard2: file(name: { eq: "recruiters-candidatures-card-2" }) {
-        cloudinary: childCloudinaryAsset {
-          fluid {
-            ...CloudinaryAssetFluid
-          }
-        }
-      }
-
-      recruiterCard3: file(name: { eq: "recruiters-candidatures-card-3" }) {
-        cloudinary: childCloudinaryAsset {
-          fluid {
-            ...CloudinaryAssetFluid
-          }
-        }
-      }
-
-      spheresLeft: file(name: { eq: "Spheres_left" }) {
-        cloudinary: childCloudinaryAsset {
-          fluid {
-            ...CloudinaryAssetFluid
-          }
-        }
-      }
-
-      spheresRight: file(name: { eq: "Spheres_right" }) {
-        cloudinary: childCloudinaryAsset {
-          fluid {
-            ...CloudinaryAssetFluid
-          }
-        }
-      }
-
       recruiterOfferSm: file(name: { eq: "offres-entreprises-s" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
@@ -83,21 +38,15 @@ export function Showcase() {
       }
     }
   `);
-  const sources = [
-    recruiterCard1.cloudinary.fluid,
-    recruiterCard2.cloudinary.fluid,
-    recruiterCard3.cloudinary.fluid,
-  ];
-
   const offerSources = [
     recruiterOfferSm.cloudinary.fluid,
     {
-      ...recruiterOfferMd.cloudinary.fluid,
       media: `(min-width: 491px)`,
+      ...recruiterOfferMd.cloudinary.fluid,
     },
     {
-      ...recruiterOfferLg.cloudinary.fluid,
       media: `(min-width: 1021px)`,
+      ...recruiterOfferLg.cloudinary.fluid,
     },
   ];
 
@@ -117,7 +66,7 @@ export function Showcase() {
 
 function ShowcaseEmploymentOffer({ sources }) {
   return (
-    <div className="relative z-30 w-full">
+    <div className="w-full">
       <Image fluid={sources} />
     </div>
   );
