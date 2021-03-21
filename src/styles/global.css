@@ -220,4 +220,8 @@
   .default-padding-x {
     @apply px-4 md:px-6 lg:px-16;
   }
+  .text-gradient {
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }

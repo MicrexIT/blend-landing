@@ -107,6 +107,9 @@ module.exports = {
       sm: ".125rem",
       DEFAULT: "2.25rem",
       lg: "2.25rem",
+      12: "12px",
+      11: "11px",
+      9: "9px",
       full: "9999px",
     },
 
