@@ -54,7 +54,16 @@ export function Home() {
     },
   ];
   return (
-    <Views.Home sources={sources} bannerText={bannerText} recruiter={true}>
+    <Views.Home
+      sources={sources}
+      bannerText={bannerText}
+      messages={
+        <p className="text-white sm:text-sm md:text-base lg:text-lg w-367 md:w-500 lg:w-550">
+          {bannerText.messages[0]}
+        </p>
+      }
+      recruiter={true}
+    >
       <RecruiterHomePicture />
     </Views.Home>
   );

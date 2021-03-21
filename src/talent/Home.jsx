@@ -10,7 +10,7 @@ const bannerText = {
     "Blend trouve pour vous les",
     "meilleures opportunités de carrière.",
   ],
-  callToAction: "2mn pour s'inscrire",
+  callToAction: "Lancez-vous!",
 };
 
 export function Home() {
@@ -57,7 +57,16 @@ export function Home() {
     },
   ];
   return (
-    <Views.Home sources={sources} bannerText={bannerText}>
+    <Views.Home
+      sources={sources}
+      bannerText={bannerText}
+      messages={
+        <p className="text-white sm:text-sm md:text-base lg:text-lg w-367 md:w-500 lg:w-550">
+          {bannerText.messages[0]}{" "}
+          <span className="font-bold">{bannerText.messages[1]} </span>
+        </p>
+      }
+    >
       <TalentHomeIphone />
     </Views.Home>
   );

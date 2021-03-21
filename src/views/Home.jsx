@@ -3,7 +3,7 @@ import BackgroundImage from "gatsby-background-image-es5";
 import { Button } from "../components/Button";
 import { BackgroundGrandientPurpleDark } from "../components/BackgroundGradientBrand";
 
-export function Home({ bannerText, sources, recruiter, children }) {
+export function Home({ bannerText, sources, messages, recruiter, children }) {
   return (
     <BackgroundImage
       fluid={sources}
@@ -18,11 +18,7 @@ export function Home({ bannerText, sources, recruiter, children }) {
           <span>{bannerText.titleBold}</span>
         </h1>
 
-        <p className="text-white sm:text-sm md:text-base lg:text-lg w-367 md:w-500 lg:w-550">
-          {bannerText.messages.map((m) => {
-            return <span key={m}>{`${m} `} </span>;
-          })}
-        </p>
+        {messages}
         <Button label={bannerText.callToAction} large={recruiter} />
       </div>
       {children}
