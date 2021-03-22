@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import "tailwindcss/tailwind.css";
 import { NavigationBar } from "./NavigationBar";
 import { Footer } from "./Footer";
+import { SEO } from "./SEO";
 
 import "@fontsource/open-sans/index.css";
 import "@fontsource/open-sans/300.css";
@@ -21,6 +22,7 @@ export function Layout({ children }) {
         <meta charSet="utf-8" />
         <title>Blend</title>
       </Helmet>
+      <SEO />
       <NavigationBar />
       <main className="relative overflow-x-hidden">{children}</main>
       <Footer />

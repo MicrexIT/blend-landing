@@ -27,22 +27,20 @@ export function MenuMobile({ closeMenu }) {
         zIndex: "1000",
       }}
     >
-      <div className="cursor-pointer w-3" onClick={closeMenu}>
+      <div className="cursor-pointer w-3 hover:opacity-50" onClick={closeMenu}>
         <Image fluid={xIcon} />
       </div>
       <div className="text-left items-start flex flex-col space-y-8">
-        <Link to="/">
-          <p className="cursor-pointer sans font-bold text-lg">Talents</p>
+        <Link to="/" activeClassName="font-bold">
+          <span className="cursor-pointer sans text-lg">Talents</span>
         </Link>
 
-        <Link to="/entreprises">
-          <p className="cursor-pointer sans font-bold text-lg">Entreprises</p>
+        <Link to="/entreprises" activeClassName="font-bold">
+          <span className="cursor-pointer sans text-lg">Entreprises</span>
         </Link>
 
-        <Link to="/contact">
-          <p className="cursor-pointer sans font-bold text-lg">
-            Nous Contacter
-          </p>
+        <Link to="/contact" activeClassName="font-bold">
+          <span className="cursor-pointer sans text-lg">Nous Contacter</span>
         </Link>
       </div>
       <div className="flex flex-row justify-self-end items-center justify-between">

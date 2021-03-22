@@ -34,18 +34,18 @@ export function Menu() {
       </div>
       <div className="hidden md:flex flex-row items-center space-x-4">
         <div className="flex border-r border-black flex-row items-center space-x-4 px-4 font-sans">
-          <Link to="/">
-            <span className="hover:opacity-70 cursor-pointer font-bold text-black">
+          <Link to="/" activeClassName="font-bold">
+            <span className="hover:opacity-70 cursor-pointer  text-black">
               Talents
             </span>
           </Link>
 
-          <Link to="/entreprises">
+          <Link to="/entreprises" activeClassName="font-bold">
             <span className=" hover:opacity-70 cursor-pointer text-black">
               Entreprises
             </span>
           </Link>
-          <Link to="/contact">
+          <Link to="/contact" activeClassName="font-bold">
             <span className=" hover:opacity-70 cursor-pointer text-black">
               Nous contacter
             </span>

@@ -34,16 +34,16 @@ export function Footer({ ...props }) {
             <Image fluid={logoFooter} />
           </div>
           <div className="text-left flex flex-col items-start lg:flex-row lg:items-center space-y-3 md:space-y-6 lg:space-y-0 lg:space-x-8 ">
-            <Link to="/">
-              <p>Talents</p>
+            <Link to="/" activeClassName="font-bold">
+              <span>Talents</span>
             </Link>
 
-            <Link to="/entreprises">
-              <p>Entreprises</p>
+            <Link to="/entreprises" activeClassName="font-bold">
+              <span>Entreprises</span>
             </Link>
 
-            <Link to="/contact">
-              <p>Nous Contacter</p>
+            <Link to="/contact" activeClassName="font-bold">
+              <span>Nous Contacter</span>
             </Link>
           </div>
         </div>

@@ -2,8 +2,13 @@ require("dotenv").config();
 
 module.exports = {
   siteMetadata: {
-    title: "blend-landing",
+    title: "Blend",
+    titleTemplate: "%s · Blend",
+    description:
+      "Trouvez le job qui vous correspond. Blend trouve pour vous les meilleures opportunités de carrière. Des profils qualifiés Qui reflètent vos valeurs Trouvez le bon candidat en un rien de temps",
+    url: "https://blend.careers", // No trailing slash allowed!
     siteUrl: "https://blend.careers",
+    image: "/images/icon.png", // Path to your image you placed in the 'static' folder
   },
   plugins: [
     `gatsby-plugin-postcss`,
