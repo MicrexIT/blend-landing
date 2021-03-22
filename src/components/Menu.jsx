@@ -45,11 +45,12 @@ export function Menu() {
               Entreprises
             </span>
           </Link>
-          <Link to="/contact" activeClassName="font-bold">
+
+          <a href="mailto:hello@blend.careers?subject=Get In Touch">
             <span className=" hover:opacity-70 cursor-pointer text-black">
               Nous contacter
             </span>
-          </Link>
+          </a>
         </div>
         <div className="flex flex-row items-center space-x-4">
           <Button secondary small label="start" />

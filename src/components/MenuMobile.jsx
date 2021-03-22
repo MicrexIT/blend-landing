@@ -39,9 +39,9 @@ export function MenuMobile({ closeMenu }) {
           <span className="cursor-pointer sans text-lg">Entreprises</span>
         </Link>
 
-        <Link to="/contact" activeClassName="font-bold">
+        <a href="mailto:hello@blend.careers?subject=Get In Touch">
           <span className="cursor-pointer sans text-lg">Nous Contacter</span>
-        </Link>
+        </a>
       </div>
       <div className="flex flex-row justify-self-end items-center justify-between">
         <p className="serif font-bold cursor-pointer hover:text-purple-400 text-gray-500">
