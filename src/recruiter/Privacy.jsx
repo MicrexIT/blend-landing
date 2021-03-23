@@ -12,6 +12,7 @@ export const privacy = {
   description2: "Présentation de profils ultra-qualifiés",
   description3: "Plannification d’entretien en 1 clic",
   callToAction: "Essai 30 jours gratuits",
+  link: "https://meetings.hubspot.com/yann35",
 };
 
 export function Privacy() {
@@ -63,7 +64,14 @@ export function Privacy() {
     <Views.Privacy
       sources={sources}
       privacy={privacy}
-      Button={<Button label={privacy.callToAction} secondary large />}
+      Button={
+        <Button
+          label={privacy.callToAction}
+          secondary
+          large
+          link={privacy.link}
+        />
+      }
     >
       <TextWithIcon content={privacy.description1} />
       <TextWithIcon content={privacy.description2} />

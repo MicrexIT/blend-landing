@@ -1,9 +1,9 @@
 import React from "react";
 import { Layout } from "../components/Layout";
 import Recruiter from "../recruiter";
-const Recruiters = () => {
+const Recruiters = ({location}) => {
   return (
-    <Layout>
+    <Layout location={location}>
       {/* <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />

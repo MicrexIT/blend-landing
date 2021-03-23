@@ -2,7 +2,7 @@ import React from "react";
 import Image from "gatsby-image";
 import { graphql, useStaticQuery, Link } from "gatsby";
 
-export function MenuMobile({ closeMenu }) {
+export function MenuMobile({ closeMenu, inscriptionLink }) {
   const data = useStaticQuery(graphql`
     query XCloseIcon {
       xCloseIcon: file(name: { eq: "x-icon" }) {
@@ -44,9 +44,14 @@ export function MenuMobile({ closeMenu }) {
         </a>
       </div>
       <div className="flex flex-row justify-self-end items-center justify-between">
-        <p className="serif font-bold cursor-pointer hover:text-purple-400 text-gray-500">
-          Log in
-        </p>
+        <a href={inscriptionLink} target="_blank">
+          <p
+            disabled
+            className="serif font-bold cursor-pointer hover:text-purple-400 text-gray-500"
+          >
+            Log in
+          </p>
+        </a>
         <div></div>
       </div>
     </div>

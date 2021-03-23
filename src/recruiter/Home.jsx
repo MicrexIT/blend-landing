@@ -7,6 +7,7 @@ const bannerText = {
   title: ["Des profils qualifiés ", "qui ", "reflètent vos valeurs"],
   messages: ["Trouvez le bon candidat en un rien de temps"],
   callToAction: "Essai 30 jours gratuits",
+  link: "https://meetings.hubspot.com/yann35",
 };
 
 export function Home() {

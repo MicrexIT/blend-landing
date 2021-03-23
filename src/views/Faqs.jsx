@@ -16,7 +16,7 @@ export function Faqs({ faqs }) {
         <h2 className="text-black font-bold ">{faqs.titleBold}</h2>
         <p className="text-black">{faqs.description}</p>
 
-        <Button label={faqs.callToAction} />
+        <Button label={faqs.callToAction} link={faqs.link} />
       </div>
       <QuestionAndAnswer faqs={faqs} />
     </section>

@@ -1,7 +1,7 @@
 import * as React from "react";
 
 export function Button({
-  handleClick,
+  link,
   secondary = false,
   small = false,
   label = "button",
@@ -9,11 +9,17 @@ export function Button({
 }) {
   return (
     <div
-      className={`${small ? "small " : ""}${secondary ? "secondary " : ""}${
+    className={`${small ? "small " : ""}${secondary ? "secondary " : ""}${
         large ? "large " : ""
       } btn`}
     >
-      <button>{label}</button>
+      <a
+        className="p-0 m-0 align-top transform-none no-underline"
+        href={link}
+        target="_blank"
+      >
+        <button>{label}</button>
+      </a>
     </div>
   );
 }

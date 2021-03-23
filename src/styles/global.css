@@ -16,11 +16,7 @@
   button {
     @apply transform-none outline-none;
     @apply cursor-pointer;
-    @apply text-center align-middle;
-  }
-  a:hover,
-  button:hover {
-    @apply outline-none opacity-50;
+    @apply text-center align-baseline;
   }
 
   a:focus,
@@ -83,7 +79,7 @@
 
 @layer components {
   .btn {
-    /* @apply flex items-center justify-center; */
+    @apply flex items-center justify-center;
     @apply border bg-orange text-white border-orange-400;
     @apply w-42 md:w-52;
     @apply leading-13 md:leading-18;

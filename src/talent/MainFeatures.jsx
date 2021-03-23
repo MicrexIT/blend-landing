@@ -15,6 +15,8 @@ const mainFeatures = {
     "Postulez en 1 clic",
   ],
   callToAction: "Lancez-vous!",
+  link: "https://2e16763c.sibforms.com/serve/MUIEAC1yKKasQLg1M1CgcPg4qrWG_kGaEn0DvbgOHPOGxbVlRxgDqr2bNWAi1mF3omOdv4psXvheZAwNza3ZATfWjwkGze1iqEtzCNxu7xapEztR7I_n8atBVqlUoOfc8xJJ2h7kSMdIfn26qkp3CGDwPtTLHzWbW31NbYw6kYYrz3LSAA6O9S_BFVuN_c5z0ocUeJbKZsR3VtP3"
+  
 };
 
 export function MainFeatures({ ...props }) {

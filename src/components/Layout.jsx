@@ -15,15 +15,24 @@ import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";
 import "../styles/global.css";
 
-export function Layout({ children }) {
+export function Layout({ location, children }) {
+  console.log(location);
   return (
     <>
       <Helmet>
         <meta charSet="utf-8" />
         <title>Blend</title>
+
+        <script
+          type="text/javascript"
+          id="hs-script-loader"
+          async
+          defer
+          src="//js.hs-scripts.com/19557139.js"
+        ></script>
       </Helmet>
       <SEO />
-      <NavigationBar />
+      <NavigationBar location={location} />
       <main className="relative overflow-x-hidden">{children}</main>
       <Footer />
     </>

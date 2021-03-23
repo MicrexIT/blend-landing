@@ -9,6 +9,7 @@ const perks = {
   titleNormal: "Distinguez vous. ",
   titleBold: "Une meilleure expérience, avec moins de biais.",
   callToAction: "Obtenez votre accès gratuit",
+  link: "https://meetings.hubspot.com/yann35",
   illustration1: "/perks_offers.png",
   illustration2: "/perks_iphone.png",
   items: [
@@ -83,7 +84,9 @@ export function Perks() {
   return (
     <Views.Perks
       recruiter
-      Bottom={<PricingOptions callToAction={perks.callToAction} />}
+      Bottom={
+        <PricingOptions callToAction={perks.callToAction} link={perks.link} />
+      }
     >
       <h2 className="px-6 relative z-20 text-white font-bold text-center">
         {perks.titleNormal}

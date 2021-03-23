@@ -3,7 +3,7 @@ import { Logo } from "./Logo";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import { Menu } from "../components/Menu";
 
-export function NavigationBar() {
+export function NavigationBar({ location }) {
   const [headerVisible, setHeaderVisible] = useState({
     transition: "all 200ms ease-in",
   });
@@ -30,7 +30,7 @@ export function NavigationBar() {
   return (
     <nav style={{ ...headerVisible }}>
       <Logo />
-      <Menu />
+      <Menu pathName={location.pathName || ""} />
     </nav>
   );
 }

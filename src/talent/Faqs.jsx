@@ -7,6 +7,7 @@ export function Faqs() {
     description:
       "Nous restons à votre écoute. Il suffit de nous envoyer un email.",
     callToAction: "Contactez-nous",
+    link: "mailto:hello@blend.careers?subject=Get In Touch",
     items: [
       {
         title: "BLEND EST-IL GRATUIT ?",

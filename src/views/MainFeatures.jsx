@@ -4,7 +4,7 @@ import Image from "gatsby-image";
 import { Dot } from "../components/Dot";
 import { Button } from "../components/Button";
 
-export function MainFeatures({ mainFeatures, children }) {
+export function MainFeatures({ mainFeatures, recruiter = false, children }) {
   return (
     <section className="main-features pb-12 pt-16 flex flex-col lg:flex-row lg:justify-between space-y-8 md:space-y-12 lg:space-y-0 lg:space-x-5">
       <GradientBand />
@@ -19,7 +19,12 @@ export function MainFeatures({ mainFeatures, children }) {
           ))}
         </div>
         <div className=" mt-12 md:mt-14 lg:mt-16">
-          <Button secondary label={mainFeatures.callToAction} />
+          <Button
+            secondary
+            label={mainFeatures.callToAction}
+            link={mainFeatures.link}
+            large={recruiter}
+          />
         </div>
       </div>
       {children}

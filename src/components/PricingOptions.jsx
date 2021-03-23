@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Image from "gatsby-image";
 import { Button } from "./Button";
 
-export function PricingOptions({ callToAction }) {
+export function PricingOptions({ callToAction, link }) {
   const {
     recruiterCreditsIcon,
     recruiterCheckBusinessIcon,
@@ -57,7 +57,7 @@ export function PricingOptions({ callToAction }) {
       // style={{ minHeight: "700px" }}
     >
       <h2 className="relative z-20 text-white font-medium text-center">
-        Recrutement performant.
+        Recrutement performant.{" "}
         <span className="text-white font-bold">Pricing transparent.</span>
       </h2>
       <div className="relative z-20 grid grid-cols-table grid-rows-table items-center w-full bg-white rounded-lg p-3 py-6 md:p-6 lg:p-8 gap-6 md:gap-8">
@@ -139,7 +139,7 @@ export function PricingOptions({ callToAction }) {
           <PricingTextCell content={"150"} />
         </PricingTableCell>
       </div>
-      <Button label={callToAction} large />
+      <Button label={callToAction} large link={link} />
     </div>
   );
 }

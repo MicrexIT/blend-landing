@@ -22,7 +22,11 @@ export function Home({
         {title}
 
         {messages}
-        <Button label={bannerText.callToAction} large={recruiter} />
+        <Button
+          label={bannerText.callToAction}
+          large={recruiter}
+          link={bannerText.link}
+        />
       </div>
       {children}
     </BackgroundImage>

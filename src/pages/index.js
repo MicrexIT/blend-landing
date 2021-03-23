@@ -8,9 +8,9 @@ import Talent from "../talent";
 // TODO: add app layout (ex _app.js)
 // TODO: maybe add _document.js
 
-const IndexPage = () => {
+const IndexPage = ({location}) => {
   return (
-    <Layout>
+    <Layout location={location}>
       {/* <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />

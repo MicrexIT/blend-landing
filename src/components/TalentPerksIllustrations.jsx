@@ -37,7 +37,7 @@ export function TalentPerksIllustrations({ perks }) {
         <h2 className="text-white font-bold mb-10 md:mb-12 lg:mb-16 xl:mb-20">
           {perks.titleBold}
         </h2>
-        <Button />
+        <Button label={perks.callToAction} />
       </div>
       {/* <div className="col-span-1 row-start-2 w-1/3 lg:w-1/4 lg:order-1 self-start"> */}
       <div className="col-span-1 row-start-2 lg:row-start-1 col-start-1 self-stretch lg:self-center max-w-xs lg:max-w-sm">
