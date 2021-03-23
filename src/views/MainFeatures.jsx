@@ -6,9 +6,9 @@ import { Button } from "../components/Button";
 
 export function MainFeatures({ mainFeatures, recruiter = false, children }) {
   return (
-    <section className="main-features pb-12 pt-16 flex flex-col lg:flex-row lg:justify-between space-y-8 md:space-y-12 lg:space-y-0 lg:space-x-5">
+    <section className="main-features pb-12 pt-12 lg:pt-26 flex flex-col lg:flex-row lg:justify-between space-y-8 md:space-y-12 lg:space-y-0 lg:space-x-5">
       <GradientBand />
-      <div className="relative z-20 flex flex-col space-y-5 mt-7">
+      <div className="relative z-20 flex flex-col space-y-5 lg:space-y-7 xl:space-y-8">
         <div className="flex flex-col">
           <h2 className="text-black">{mainFeatures.titleNormal}</h2>
           <h2 className="text-black font-bold">{mainFeatures.titleBold}</h2>
