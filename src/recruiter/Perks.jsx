@@ -6,7 +6,7 @@ import { Views } from "../views";
 import { PricingOptions } from "../components/PricingOptions";
 
 const perks = {
-  titleNormal: "Distinguez vous.",
+  titleNormal: "Distinguez vous. ",
   titleBold: "Une meilleure expérience, avec moins de biais.",
   callToAction: "Obtenez votre accès gratuit",
   illustration1: "/perks_offers.png",
@@ -85,11 +85,11 @@ export function Perks() {
       recruiter
       Bottom={<PricingOptions callToAction={perks.callToAction} />}
     >
-      <h2 className="relative z-20 text-white font-bold text-center">
+      <h2 className="px-6 relative z-20 text-white font-bold text-center">
         {perks.titleNormal}
         <span className="text-white font-medium">{perks.titleBold}</span>
       </h2>
-      <div className="flex flex-col items-center default-padding-x lg:items-start lg:flex-row space-y-12 lg:space-y-0 lg:space-x-24">
+      <div className="flex flex-col items-center px-24 lg:items-start lg:flex-row space-y-12 lg:space-y-0 lg:space-x-24">
         {perks.items.map(({ title, content }, index) => {
           return (
             <div

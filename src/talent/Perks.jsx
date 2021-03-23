@@ -108,7 +108,7 @@ export function Perks() {
   const jobOfferRightSource = talentJobOffersPhonePerk.cloudinary.fluid;
   return (
     <Views.Perks Bottom={<TalentPerksIllustrations perks={perks} />}>
-      <div className="flex flex-col items-center default-padding-x lg:items-start lg:flex-row space-y-12 lg:space-y-0 lg:space-x-24">
+      <div className="flex flex-col items-center px-24 lg:items-start lg:flex-row space-y-12 lg:space-y-0 lg:space-x-24">
         {perks.items.map(({ title, content }, index) => {
           return (
             <div
