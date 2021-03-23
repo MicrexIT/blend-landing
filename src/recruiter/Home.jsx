@@ -4,8 +4,7 @@ import { Views } from "../views";
 import { RecruiterHomePicture } from "../components/RecruiterHomePicure";
 
 const bannerText = {
-  title: "Des profils qualifiés",
-  titleBold: "Qui reflètent vos valeurs",
+  title: ["Des profils qualifiés ", "qui ", "reflètent vos valeurs"],
   messages: ["Trouvez le bon candidat en un rien de temps"],
   callToAction: "Essai 30 jours gratuits",
 };
@@ -57,6 +56,15 @@ export function Home() {
     <Views.Home
       sources={sources}
       bannerText={bannerText}
+      title={
+        <h1>
+          {bannerText.title[0]}
+          <span className="font-bold">
+            {bannerText.title[1]}
+            <span className="xl:block">{bannerText.title[2]}</span>
+          </span>
+        </h1>
+      }
       messages={
         <div>
           <p className="text-white sm:text-sm md:text-base lg:text-lg w-367 md:w-500 lg:w-550">

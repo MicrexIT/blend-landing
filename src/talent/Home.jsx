@@ -4,8 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { Views } from "../views";
 
 const bannerText = {
-  title: "Trouvez le job",
-  titleBold: "qui vous correspond",
+  title: ["Trouvez ", "le job ", "qui ", "vous correspond"],
   messages: [
     "Blend trouve pour vous les",
     "meilleures opportunités de carrière.",
@@ -60,9 +59,21 @@ export function Home() {
     <Views.Home
       sources={sources}
       bannerText={bannerText}
+      title={
+        <h1>
+          {bannerText.title[0]}
+          <span className="font-bold">
+            {bannerText.title[1]}
+            <span className="block md:inline">
+              {bannerText.title[2]}
+              <span className="xl:block">{bannerText.title[3]}</span>
+            </span>
+          </span>
+        </h1>
+      }
       messages={
         <div>
-          <p className="text-white sm:text-sm md:text-base lg:text-lg w-367 md:w-500 lg:w-550">
+          <p className="text-white sm:text-sm md:text-base lg:text-lg">
             {bannerText.messages[0]}{" "}
             <span className="font-bold">{bannerText.messages[1]} </span>
           </p>
