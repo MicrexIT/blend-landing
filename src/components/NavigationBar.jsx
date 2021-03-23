@@ -10,7 +10,7 @@ export function NavigationBar({ location }) {
 
   useScrollPosition(
     ({ prevPos, currPos }) => {
-      const isVisible = currPos.y > prevPos.y;
+      const isVisible = currPos.y > prevPos.y - 10;
 
       const newHeaderVisible = {
         visibility: isVisible ? "visible" : "hidden",
