@@ -203,7 +203,6 @@
   }
   .flow-band {
     @apply h-20 xs:h-26 lg:h-44;
-    background: -webkit-linear-gradient(90deg, #701dda -7.32%, #fe8c01 102.72%);
     background: linear-gradient(90deg, #701dda -7.32%, #fe8c01 102.72%);
     box-shadow: 0px 4px 10px rgba(72, 72, 72, 0.25);
     transform: skewY(12.76deg) translateY(40px);
