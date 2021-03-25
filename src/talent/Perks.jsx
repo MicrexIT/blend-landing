@@ -22,7 +22,6 @@ const perks = {
           <span className="font-bold">
             utiles à votre recherche d’emploi sont transmises aux entreprises.
           </span>
-          ,
         </>
       ),
     },

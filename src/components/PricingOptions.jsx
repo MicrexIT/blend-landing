@@ -124,7 +124,7 @@ export function PricingOptions({ callToAction, link }) {
         <PricingTableCell>
           <PricingTitleIconCell
             content={"Crédits de sourcing"}
-            subContent={"Pour reveler l’identité ou contacter"}
+            subContent={"Pour révéler l’identité ou contacter"}
             icon={creditsIcon}
           />
         </PricingTableCell>

@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { Views } from "../views";
 
 const tags = {
-  titleBold: "Tout les talents dont vous avez besoin",
+  titleBold: "Tous les talents dont vous avez besoin",
   description: "pour booster votre croissance.",
   grids: [
     {
