@@ -19,7 +19,6 @@ module.exports = {
         path: `${__dirname}/src/cloudinary-images`,
       },
     },
-
     {
       resolve: "gatsby-transformer-cloudinary",
       options: {
@@ -31,12 +30,13 @@ module.exports = {
         // fluidMaxWidth: 1800,
       },
     },
-    // {
-    //   resolve: "gatsby-plugin-google-analytics",
-    //   options: {
-    //     trackingId: "",
-    //   },
-    // },
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "G-7B48NKX5T0",
+      },
+    },
+    
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
@@ -44,6 +44,14 @@ module.exports = {
       options: {
         icon: "src/images/icon.png",
         short_name: "blend",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        includeInDevelopment: true, // optional parameter to include script in development
+        id: 2318355,
+        sv: 6,
       },
     },
     {
