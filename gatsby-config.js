@@ -30,13 +30,6 @@ module.exports = {
         // fluidMaxWidth: 1800,
       },
     },
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "G-7B48NKX5T0",
-      },
-    },
-    
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
@@ -44,14 +37,6 @@ module.exports = {
       options: {
         icon: "src/images/icon.png",
         short_name: "blend",
-      },
-    },
-    {
-      resolve: `gatsby-plugin-hotjar`,
-      options: {
-        includeInDevelopment: true, // optional parameter to include script in development
-        id: 2318355,
-        sv: 6,
       },
     },
     {
@@ -66,6 +51,34 @@ module.exports = {
           // https://purgecss.com/configuration.html#options
           // safelist: ['safelist'], // Don't remove this selector
         },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "G-7B48NKX5T0",
+  
+        // Include GTM in development.
+        //
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+  
+        // datalayer to be set before GTM is loaded
+        // should be an object or a function that is executed in the browser
+        //
+        // Defaults to null
+        defaultDataLayer: { platform: "gatsby" },
+  
+        // Specify optional GTM environment details.
+        // gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING",
+        // gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_PREVIEW_NAME",
+        // dataLayerName: "YOUR_DATA_LAYER_NAME",
+  
+        // Name of the event that is triggered
+        // on every Gatsby route change.
+        //
+        // Defaults to gatsby-route-change
+        // routeChangeEventName: "YOUR_ROUTE_CHANGE_EVENT_NAME",
       },
     },
   ],
